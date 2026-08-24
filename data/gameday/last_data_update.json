@@ -1,0 +1,340 @@
+{
+  "odds": {
+    "updated_at": "2026-08-24T15:32:51.462635+00:00",
+    "leagues": {
+      "EPL": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "Bundesliga": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "LaLiga": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "SerieA": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "PrimeiraLiga": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "Championship": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "Ligue1": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "Eredivisie": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "Belgium": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "MLS": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "Scotland": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      },
+      "Turkey": {
+        "ok": false,
+        "error": "'charmap' codec can't encode character '\\u2192' in position 4: character maps to <undefined>"
+      }
+    }
+  },
+  "updated_at_odds": "2026-08-24T15:32:51.462635+00:00",
+  "model": {
+    "kind": "full_model_refresh",
+    "updated_at": "2026-08-24T15:22:12.918602+00:00",
+    "ok": true,
+    "force_season": 2026,
+    "leagues": [
+      "EPL",
+      "Bundesliga",
+      "LaLiga",
+      "SerieA",
+      "PrimeiraLiga"
+    ],
+    "failed": [],
+    "results": [
+      {
+        "league": "EPL",
+        "ok": true,
+        "steps": [
+          {
+            "step": "football_data",
+            "ok": true,
+            "n": 4560
+          },
+          {
+            "step": "understat",
+            "ok": true,
+            "n": 4569
+          },
+          {
+            "step": "pulse_completed",
+            "ok": true,
+            "n": 9
+          },
+          {
+            "step": "align",
+            "ok": true,
+            "n": 4595
+          },
+          {
+            "step": "fixtures",
+            "ok": true,
+            "n": 30,
+            "source": "premierleague_pulse"
+          }
+        ],
+        "current_season": {
+          "n": 9,
+          "n_football_data": 0,
+          "n_extra": 9,
+          "n_xg": 9,
+          "latest": "2026-08-23"
+        }
+      },
+      {
+        "league": "Bundesliga",
+        "ok": true,
+        "steps": [
+          {
+            "step": "football_data",
+            "ok": true,
+            "n": 3672
+          },
+          {
+            "step": "understat",
+            "ok": true,
+            "n": 3672
+          },
+          {
+            "step": "align",
+            "ok": true,
+            "n": 3673
+          },
+          {
+            "step": "fixtures",
+            "ok": true,
+            "n": 9,
+            "source": "pinnacle_matchups"
+          }
+        ],
+        "current_season": {
+          "n": 0,
+          "n_football_data": 0,
+          "n_extra": 0,
+          "n_xg": 0,
+          "latest": null
+        }
+      },
+      {
+        "league": "LaLiga",
+        "ok": true,
+        "steps": [
+          {
+            "step": "football_data",
+            "ok": true,
+            "n": 4567
+          },
+          {
+            "step": "understat",
+            "ok": true,
+            "n": 4574
+          },
+          {
+            "step": "align",
+            "ok": true,
+            "n": 4646
+          },
+          {
+            "step": "fixtures",
+            "ok": true,
+            "n": 37,
+            "source": "understat"
+          }
+        ],
+        "current_season": {
+          "n": 16,
+          "n_football_data": 7,
+          "n_extra": 9,
+          "n_xg": 16,
+          "latest": "2026-08-23"
+        }
+      },
+      {
+        "league": "SerieA",
+        "ok": true,
+        "steps": [
+          {
+            "step": "football_data",
+            "ok": true,
+            "n": 4560
+          },
+          {
+            "step": "understat",
+            "ok": true,
+            "n": 4568
+          },
+          {
+            "step": "align",
+            "ok": true,
+            "n": 4581
+          },
+          {
+            "step": "fixtures",
+            "ok": true,
+            "n": 32,
+            "source": "understat"
+          }
+        ],
+        "current_season": {
+          "n": 8,
+          "n_football_data": 0,
+          "n_extra": 8,
+          "n_xg": 8,
+          "latest": "2026-08-23"
+        }
+      },
+      {
+        "league": "PrimeiraLiga",
+        "ok": true,
+        "steps": [
+          {
+            "step": "football_data",
+            "ok": true,
+            "n": 3689
+          },
+          {
+            "step": "understat",
+            "ok": true,
+            "n": 0
+          },
+          {
+            "step": "align",
+            "ok": true,
+            "n": 3689
+          },
+          {
+            "step": "fixtures",
+            "ok": true,
+            "n": 4,
+            "source": "pinnacle_matchups"
+          }
+        ],
+        "current_season": {
+          "n": 17,
+          "n_football_data": 17,
+          "n_extra": 0,
+          "n_xg": 17,
+          "latest": "2026-08-17"
+        }
+      }
+    ],
+    "current_season": {
+      "Ligue1": {
+        "n": 9,
+        "n_football_data": 0,
+        "n_extra": 9,
+        "n_xg": 9,
+        "latest": "2026-08-23"
+      },
+      "Eredivisie": {
+        "n": 18,
+        "n_football_data": 18,
+        "n_extra": 0,
+        "n_xg": 18,
+        "latest": "2026-08-16"
+      },
+      "Belgium": {
+        "n": 18,
+        "n_football_data": 18,
+        "n_extra": 0,
+        "n_xg": 18,
+        "latest": "2026-08-16"
+      },
+      "Championship": {
+        "n": 12,
+        "n_football_data": 12,
+        "n_extra": 0,
+        "n_xg": 12,
+        "latest": "2026-08-17"
+      },
+      "Turkey": {
+        "n": 9,
+        "n_football_data": 9,
+        "n_extra": 0,
+        "n_xg": 9,
+        "latest": "2026-08-17"
+      },
+      "Scotland": {
+        "n": 11,
+        "n_football_data": 11,
+        "n_extra": 0,
+        "n_xg": 11,
+        "latest": "2026-08-09"
+      },
+      "EPL": {
+        "n": 9,
+        "n_football_data": 0,
+        "n_extra": 9,
+        "n_xg": 9,
+        "latest": "2026-08-23"
+      },
+      "Bundesliga": {
+        "n": 0,
+        "n_football_data": 0,
+        "n_extra": 0,
+        "n_xg": 0,
+        "latest": null
+      },
+      "LaLiga": {
+        "n": 16,
+        "n_football_data": 7,
+        "n_extra": 9,
+        "n_xg": 16,
+        "latest": "2026-08-23"
+      },
+      "SerieA": {
+        "n": 8,
+        "n_football_data": 0,
+        "n_extra": 8,
+        "n_xg": 8,
+        "latest": "2026-08-23"
+      },
+      "PrimeiraLiga": {
+        "n": 17,
+        "n_football_data": 17,
+        "n_extra": 0,
+        "n_xg": 17,
+        "latest": "2026-08-17"
+      }
+    }
+  },
+  "updated_at_model": "2026-08-24T15:22:12.918602+00:00",
+  "data": {
+    "kind": "full_model_refresh",
+    "updated_at": "2026-08-24T15:22:12.918602+00:00",
+    "note": "Updated as part of Full Model Refresh",
+    "leagues": [
+      "EPL",
+      "Bundesliga",
+      "LaLiga",
+      "SerieA",
+      "PrimeiraLiga"
+    ]
+  },
+  "updated_at_data": "2026-08-24T15:22:12.918602+00:00"
+}

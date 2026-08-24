@@ -1,0 +1,78 @@
+# Ablation: enable xG form features (requires Understat)
+project:
+  name: origination
+  seed: 42
+  data_dir: data
+  experiments_dir: experiments
+
+leagues:
+  - code: E0
+    name: Premier League
+    understat: EPL
+    fbref: Premier-League
+    start_season: 2014
+    end_season: null
+
+data:
+  football_data:
+    enabled: true
+    base_url: https://www.football-data.co.uk/mmz4281
+    preferred_close_books:
+      - PSC
+      - B365C
+      - AvgC
+      - PS
+      - B365
+      - Avg
+  understat:
+    enabled: true
+    base_url: https://understat.com
+  fbref:
+    enabled: false
+  align:
+    require_odds: true
+    min_date: "2014-08-01"
+
+features:
+  groups:
+    basic_form: true
+    xg_form: true
+    shots: true
+    elo: true
+    schedule: true
+    h2h: false
+    market_prior: false
+  windows: [3, 5, 10]
+  ewm_span: 10
+  elo:
+    k: 20.0
+    home_advantage: 60.0
+    initial: 1500.0
+
+model:
+  type: dixon_coles
+  max_goals: 10
+  dixon_coles:
+    rho_init: -0.05
+    xi: 0.0018
+  calibration:
+    method: none
+
+backtest:
+  mode: expanding
+  rolling_seasons: 4
+  min_train_matches: 500
+  fold: season
+  markets:
+    - "1x2"
+    - "ou25"
+  edge_threshold: 0.03
+  stake:
+    method: flat
+    unit: 1.0
+    kelly_fraction: 0.25
+    max_stake: 5.0
+  odds:
+    remove_vig: power
+    min_odds: 1.20
+    max_odds: 15.0

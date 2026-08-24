@@ -1,0 +1,24 @@
+{
+  "updated_at": "2026-08-24T16:13:30.878964+00:00",
+  "track": {
+    "n": 26,
+    "n_open": 20,
+    "n_settled": 6,
+    "n_decided": 6,
+    "wins": 2,
+    "hit": 0.3333,
+    "units": -2.8,
+    "roi": -0.4668
+  },
+  "conflict_watch": {
+    "n": 12,
+    "n_open": 5,
+    "n_settled": 7,
+    "n_decided": 7,
+    "wins": 3,
+    "hit": 0.4286,
+    "units": -1.22,
+    "roi": -0.1746
+  },
+  "n_total": 38
+}

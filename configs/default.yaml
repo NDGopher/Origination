@@ -1,0 +1,238 @@
+# Default EPL originator config — calibrated xG Dixon–Coles iteration
+# Primary ranking metric: walk-forward market log-loss, then CLV/ROI
+
+project:
+  name: origination
+  seed: 42
+  data_dir: data
+  experiments_dir: experiments
+  experiment_label: null
+
+leagues:
+  - code: E0
+    name: Premier League
+    understat: EPL
+    fbref: Premier-League
+    start_season: 2014
+    end_season: null
+
+data:
+  football_data:
+    enabled: true
+    base_url: https://www.football-data.co.uk/mmz4281
+    preferred_close_books:
+      - PSC
+      - B365C
+      - AvgC
+      - PS
+      - B365
+      - Avg
+  understat:
+    enabled: true
+    base_url: https://understat.com
+  fbref:
+    enabled: false
+  align:
+    require_odds: true
+    min_date: "2014-08-01"
+
+# Upcoming EPL fixtures for gameday (auto-scraped on update_data)
+fixtures:
+  enabled: true
+  days_ahead: 21          # keep next ~3 weeks of unplayed matches
+  max_age_hours: 48       # UI warns if older than this
+
+# Pinnacle guest API — sharp OU 2.5 reference for gameday
+pinnacle:
+  enabled: true
+  league_id: 1980         # England Premier League (default)
+  league_key: EPL
+  leagues:
+    EPL: 1980
+    Championship: 1977
+    Bundesliga: 1842
+    SerieA: 2436
+    LaLiga: 2196
+    MLS: 2663
+
+features:
+  groups:
+    basic_form: true
+    xg_form: true
+    shots: true
+    elo: true
+    schedule: true
+    understat_advanced: true   # PPDA, deep, npxG lagged rolls
+    possession_value: false    # iter11: OBV-lite from Understat shots; enable after measured
+    h2h: false
+    market_prior: false
+  windows: [3, 5, 10]
+  ewm_span: 10
+  elo:
+    k: 20.0
+    home_advantage: 60.0
+    initial: 1500.0
+  context_adjustments:
+    enabled: true
+    injuries: {enabled: false}
+    lineups:
+      enabled: false              # iter10: understat_match_players measured; hurts LL — keep off
+      provider: understat_match_players
+      strength_coef: 0.05
+      rosters_parquet: data/interim/understat_match_rosters.parquet
+      delta_scale: 0.15
+      xi_size: 11
+      starter_minutes: 45
+      # legacy prior-season squad: provider: understat_squad_quality, top_n: 15, understat_league: EPL, raw_dir: data/raw/understat
+      understat_league: EPL
+      raw_dir: data/raw/understat
+      top_n: 15
+    formations: {enabled: false}
+    motivation:
+      enabled: true               # iter4: stakes_coef=0.10 best LL on table-position motivation
+      season_length: 38
+      safety_rank: 17
+      title_pts_gap: 6.0
+      releg_pts_gap: 6.0
+      euro_pts_gap: 6.0
+      min_games: 8
+      late_games_left: 12
+      title_coef: 0.0
+      releg_coef: 0.0
+      dead_rubber_coef: 0.0
+      stakes_coef: 0.10            # grid winner (iter4)
+      motivation_diff_coef: 0.0
+    weather: {enabled: false}
+    coaching_change:
+      enabled: true
+      new_coach_days: 60
+      new_coach_games: 8
+      bounce_coef: 0.05           # iter3 winner (mild new-manager bounce)
+      changes_path: data/interim/coaching_changes.csv
+    referee:
+      enabled: true              # real lagged FD referee tendencies (see docs/REFEREE_CONTEXT.md)
+      min_prior_games: 5
+      tempo_coef: 0.0            # equal λ/μ bump; measured ≈null on 1X2 — keep off
+      card_bias_coef: 0.5        # asymmetric 1X2 channel — iter3 grid winner
+    travel: {enabled: false}
+
+model:
+  type: dixon_coles
+  max_goals: 10
+  dixon_coles:
+    rho_init: -0.05
+    xi: 0.0018
+    intensity_source: xg          # goals | xg | blend
+    blend_xg_weight: 0.7          # used when intensity_source=blend
+    intensity_adjustments:
+      enabled: true               # lagged PPDA/deep → lambda multipliers
+      ppda_coef: 0.01
+      deep_coef: 0.03             # grid winner (was 0.02)
+      congestion_coef: 0.0        # measured; do not promote (hurts OU LL at useful signs)
+      rest_coef: -0.05            # iter5: short rest → lower totals; best 1X2 LL
+      pv_coef: 0.0                # iter11/12: OBV intensity measured; do not promote
+      pv_center: 0.0              # v2 resid channel centers near 0 (when enabled)
+      shot_volume_coef: 0.06      # iter17: EPL-only — strengthens Under pack; keep 0 on D1/SP1
+      shot_volume_center: 2.4
+      xg_allow_coef: 0.06         # iter14: only channel with OU LL ↑ on EPL+D1+SP1
+      xg_allow_center: 2.4
+      tempo_ppda_coef: 0.0        # iter15: joint λ/μ from sum_ppda_ewm (measure)
+      tempo_ppda_center: 24.0
+      suppress_resid_coef: 0.0    # iter15: shots-against residual vs xG-allow
+      pv_open_orth_coef: 0.0      # iter15: open-play PV ⊥ xG-for
+    totals_intercept:
+      enabled: true               # iter15/16: scoring-rate offset
+      shrink: 0.15
+      clip: 0.12
+      mode: signed
+      dampen_shrink: 1.0
+      min_abs_raw: 0.05           # iter16: skip tiny noisy offsets (helps EPL short + pack)
+  calibration:
+    method: temperature           # none | platt | isotonic | temperature
+    ou_method: temperature        # iter5: independent O/U binary temperature
+    holdout_seasons: 1            # last N train seasons for calibrator fit
+  residual:
+    enabled: true                 # iter7/8: additive logit residual
+    mode: additive
+    backend: lightgbm
+    alpha_1x2: 0.10
+    alpha_ou: 0.10
+    label_smoothing: 0.02
+    delta_clip: 2.0
+    min_oos_rows: 300
+    max_oos_seasons: 4
+    interactions: true            # iter8 winner (with deeper params below)
+    ou_short_weight: 1.0          # iter15: >1 weights OU residual on 1.60–2.50 odds
+    ou_short_lo: 1.60
+    ou_short_hi: 2.50
+    ou_over_fav_weight: 1.0       # iter17: >1 weights when over is shorter price
+    params:
+      n_estimators: 400           # iter8: deeper residual (with interactions)
+      learning_rate: 0.04
+      num_leaves: 31
+      min_child_samples: 40
+      feature_fraction: 0.7
+      bagging_fraction: 0.7
+      reg_lambda: 1.5
+      seed: 42
+  hierarchical:
+    enabled: true                 # iter9: mild league-mean shrink (share=0.05)
+    share_attack: 0.05
+    share_defence: 0.05
+    cross_league: false
+    totals_intercept: true        # iter15 promote (EPL); see league YAMLs for D1 off / SP1 on
+    totals_shrink: 0.15
+    totals_clip: 0.12
+  lightgbm:
+    n_estimators: 400
+    learning_rate: 0.05
+    num_leaves: 31
+    min_child_samples: 40
+
+backtest:
+  mode: expanding
+  rolling_seasons: 4
+  min_train_matches: 500
+  fold: season
+  markets:
+    - "1x2"
+    - "ou25"
+    - "ah"
+  edge_threshold: 0.03
+  edge_thresholds: [0.02, 0.03, 0.04, 0.05]
+  # iter13: mild universal pack (1.50–3.00). EPL +EV pack remains in league_rule_packs.yaml
+  edge_threshold_by_market:
+    ou25: 0.05
+    ah: 0.05
+  bet_filters:
+    enabled: true
+    rules:
+      - markets: ["1x2"]
+        max_odds: 2.00
+      - markets: ["ou25"]
+        min_odds: 1.50
+        max_odds: 3.00
+      - markets: ["ah"]
+        min_odds: 1.50
+        max_odds: 3.00
+    # Legacy flat keys for older scripts:
+    apply_markets: ["1x2"]
+    max_odds: 2.00
+    require_market_favorite: false
+    block_draws: false
+  stake:
+    method: flat
+    unit: 1.0
+    kelly_fraction: 0.25
+    max_stake: 5.0
+  odds:
+    remove_vig: power
+    min_odds: 1.20
+    max_odds: 15.0
+
+prediction:
+  edge_threshold: 0.03
+  stake:
+    method: fractional_kelly
+    kelly_fraction: 0.25
+    max_stake: 5.0

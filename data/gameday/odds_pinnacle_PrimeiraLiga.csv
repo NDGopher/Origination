@@ -1,0 +1,5 @@
+match_id,ref_over25,ref_under25,pin_over25,pin_under25,pin_over25_american,pin_under25_american,pin_h,pin_d,pin_a,pin_h_american,pin_d_american,pin_a_american,pin_ah_line,pin_ahh,pin_aha,pin_ahh_american,pin_aha_american,pin_tt_home_line,pin_tt_home_over,pin_tt_home_under,pin_tt_home_over_american,pin_tt_home_under_american,pin_tt_away_line,pin_tt_away_over,pin_tt_away_under,pin_tt_away_over_american,pin_tt_away_under_american,pin_matchup_id
+20260824_GilVicente_CasaPia,2.41,1.6173,2.41,1.6173,141,-162,1.7353,3.54,5.64,-136,254,464,-0.5,1.7353,2.21,-136,121,1.5,2.07,1.8,107,-125,0.5,1.813,2.05,-123,105,1634172551
+20260828_RioAve_SportingLisbon,1.5102,2.58,1.5102,2.58,-196,158,8.23,5.88,1.3058,723,488,-327,1.25,2.21,1.6944,121,-144,0.5,1.7407,2.1,-135,110,2.5,2.2,1.6711,120,-149,1634462594
+20260829_Alverca_SantaClara,2.28,1.6452,2.28,1.6452,128,-155,2.84,3.18,2.62,184,218,162,0.0,2.01,1.8475,101,-118,1.5,3.0,1.3922,200,-255,1.5,2.81,1.4348,181,-230,1634582073
+20260830_NacionaldaMadeira_EstreladaAmadora,2.04,1.8065,2.04,1.8065,104,-124,2.46,3.22,3.0,146,222,200,-0.25,2.11,1.7692,111,-130,1.5,2.42,1.5618,142,-178,1.5,2.81,1.4367,181,-229,1634659824

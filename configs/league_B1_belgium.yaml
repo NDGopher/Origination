@@ -1,0 +1,104 @@
+# Belgium Pro League (B1) — goals-only (no Understat)
+project:
+  name: origination
+  seed: 42
+  data_dir: data
+  experiments_dir: experiments
+  experiment_label: league_B1
+
+leagues:
+  - code: B1
+    name: Belgium Pro League
+    understat: null
+    fbref: null
+    start_season: 2014
+    end_season: null
+
+data:
+  football_data:
+    enabled: true
+    base_url: https://www.football-data.co.uk/mmz4281
+    preferred_close_books: [PSC, B365C, AvgC, PS, B365, Avg]
+  understat: {enabled: false}
+  fbref: {enabled: false}
+  align:
+    require_odds: true
+    min_date: "2014-08-01"
+    output: matches_aligned_B1.parquet
+
+features:
+  groups:
+    basic_form: true
+    xg_form: false
+    shots: true
+    elo: true
+    schedule: true
+    understat_advanced: false
+    h2h: false
+    market_prior: false
+  windows: [3, 5, 10]
+  ewm_span: 10
+  elo: {k: 20.0, home_advantage: 60.0, initial: 1500.0}
+  context_adjustments: {enabled: false}
+
+model:
+  type: dixon_coles
+  max_goals: 10
+  dixon_coles:
+    rho_init: -0.05
+    xi: 0.0018
+    intensity_source: goals
+    intensity_adjustments:
+      enabled: true
+      ppda_coef: 0.0
+      deep_coef: 0.0
+      congestion_coef: 0.0
+      rest_coef: -0.05
+      shot_volume_coef: 0.06
+      shot_volume_center: 2.4
+      shot_volume_shots_scale: 10.0
+      xg_allow_coef: 0.06
+      xg_allow_center: 2.4
+      xg_allow_shots_scale: 10.0
+    totals_intercept:
+      enabled: true
+      shrink: 0.15
+      clip: 0.12
+      mode: signed
+      dampen_shrink: 1.0
+      min_abs_raw: 0.0
+  calibration:
+    method: temperature
+    ou_method: temperature
+    holdout_seasons: 1
+  residual:
+    enabled: true
+    mode: additive
+    backend: lightgbm
+    alpha_1x2: 0.10
+    alpha_ou: 0.10
+    interactions: true
+    label_smoothing: 0.02
+    delta_clip: 2.0
+    min_oos_rows: 300
+    max_oos_seasons: 4
+    params:
+      n_estimators: 300
+      learning_rate: 0.05
+      num_leaves: 31
+      min_child_samples: 40
+      feature_fraction: 0.7
+      bagging_fraction: 0.7
+      reg_lambda: 1.5
+      seed: 42
+  hierarchical: {enabled: false}
+
+backtest:
+  mode: expanding
+  min_train_matches: 400
+  fold: season
+  markets: ["1x2", "ou25", "ah"]
+  edge_threshold: 0.03
+  edge_thresholds: [0.02, 0.03, 0.04, 0.05]
+  stake: {method: flat, unit: 1.0, kelly_fraction: 0.25, max_stake: 5.0}
+  odds: {remove_vig: power, min_odds: 1.20, max_odds: 15.0}

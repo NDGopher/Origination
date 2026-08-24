@@ -1,0 +1,207 @@
+# League-specific betting rule packs
+# iter13: default.yaml uses mild universal 1.50–3.00.
+# EPL_aggressive is the iter12 +EV selection pack (optional / paper trade).
+
+packs:
+  mild_universal:
+    edge_threshold_by_market:
+      ou25: 0.05
+      ah: 0.05
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 2.00}
+        - {markets: [ou25], min_odds: 1.50, max_odds: 3.00}
+        - {markets: [ah], min_odds: 1.50, max_odds: 3.00}
+    notes: "Default research pack. Cross-league OU still negative; EPL OU≈−4.5% @ e5%."
+
+  mild_universal_e08:
+    edge_threshold_by_market:
+      ou25: 0.08
+      ah: 0.05
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 2.00}
+        - {markets: [ou25], min_odds: 1.50, max_odds: 3.00}
+        - {markets: [ah], min_odds: 1.50, max_odds: 3.00}
+    notes: "EPL OU nearly flat (−0.4%); other leagues still weak."
+
+  EPL_aggressive:
+    edge_threshold_by_market:
+      ou25: 0.08
+      ah: 0.05
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 1.80}
+        - {markets: [ou25], min_odds: 2.00, max_odds: 4.00, allow_sides: [under]}
+        - {markets: [ah], max_odds: 1.90}
+    notes: "iter12 +EV EPL selection (OU +7.6%, ALL +1.8%). Not portable. DO NOT modify rules — optional paper/live only."
+
+  EPL_overs_short_exp:
+    edge_threshold_by_market:
+      ou25: 0.10
+      ah: 0.05
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 2.00}
+        - {markets: [ou25], min_odds: 1.60, max_odds: 2.50, allow_sides: [over]}
+    notes: "iter17 EXPERIMENTAL. EPL short overs @ e10% on thresh/vol models (~+5–8% n≈190, 7/10 seasons on vol06). Not cross-league. Does NOT replace EPL_aggressive."
+
+  # --- iter19 other-league experimental packs (separate from EPL) ---
+  Bundesliga_unders_short_exp:
+    edge_threshold_by_market:
+      ou25: 0.10
+      ah: 0.05
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [ou25], min_odds: 1.70, max_odds: 2.50, allow_sides: [under]}
+    notes: "iter20 PAPER (promoted from iter19). D1 Unders 1.70–2.50 @ e≥10% on thresh05: n=161, +8.6%, 8/10 seasons, max DD −1.72u. Deep dive: experiments/iter20_bundesliga_deep/REPORT.md. Alternate 1.80–2.50 @ e10% slightly stronger (+9.6%). NOT portable to EPL. Separate from EPL packs."
+
+  # --- iter21 moneyline paper packs (OU systems above untouched) ---
+  LaLiga_home_ml_short_exp:
+    edge_threshold_by_market:
+      1x2: 0.08
+      ou25: 0.99
+      ah: 0.99
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 1.80, allow_sides: [H]}
+    notes: "iter21 PAPER. La Liga HOME ML @ e≥8% max 1.80 on vol06: n=124, +20.3%, t=3.54, p=0.001, boot CI lo +8.5%, 8/10 seasons, DD −2.0u. Alternate e5%/max1.80: n=202, +15.8%, 9/10, DD −0.69u. NOT an OU pack. Do not merge with EPL."
+
+  SerieA_away_ml_exp:
+    edge_threshold_by_market:
+      1x2: 0.03
+      ou25: 0.99
+      ah: 0.99
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 2.00, allow_sides: [A]}
+    notes: "iter21 PAPER. Serie A AWAY ML @ e≥3% max 2.00 on vol06: n=246, +12.4%, t=2.41, 10/10 seasons, DD ~0u. Wider max2.2: n=325, +14.9%, 9/10, DD −5.1u. Ranking still weak for OU — moneyline only. Separate from EPL."
+
+  # --- iter22 expansion paper / research (separate from the 5 live systems) ---
+  PrimeiraLiga_ah_e12_exp:
+    edge_threshold_by_market:
+      ah: 0.12
+      ou25: 0.99
+      1x2: 0.99
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [ah], max_odds: 1.90}
+    notes: >
+      PRIMARY PAPER-LIVE (promoted iter25). Primeira Liga AH @ e≥12% max 1.90:
+      n=161, +19.2%, t=3.05, boot CI lo +6.3%, 10/10 seasons, max DD −3.7u.
+      Live scan default when Pin AH available. e10 kept as optional wider sibling.
+
+  PrimeiraLiga_ah_short_exp:
+    edge_threshold_by_market:
+      ah: 0.10
+      ou25: 0.99
+      1x2: 0.99
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [ah], max_odds: 1.90}
+    notes: >
+      OPTIONAL WIDER SIBLING (not default live scan). AH @ e≥10% max 1.90.
+      iter23 Pin-preferred: n=242, +12.6%, t=2.46, 8/10 seasons, max DD −6.8u.
+      e10-only slice (edge 10–12%) was flat in iter25 — prefer e12 for live.
+
+  Belgium_overs_short_watch:
+    edge_threshold_by_market:
+      ou25: 0.10
+      ah: 0.99
+      1x2: 0.99
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [ou25], min_odds: 1.60, max_odds: 2.50, allow_sides: [over]}
+    notes: >
+      iter22 RESEARCH WATCH. Belgium Overs 1.60–2.50 @ e≥10%: n=115, +13.1%, t=1.53,
+      boot CI lo −3.0%, 8/9 seasons. Thin n / CI crosses zero — do not paper-trade yet.
+
+  PrimeiraLiga_home_ml_watch:
+    edge_threshold_by_market:
+      1x2: 0.10
+      ou25: 0.99
+      ah: 0.99
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 2.20, allow_sides: [H]}
+    notes: >
+      iter22 RESEARCH WATCH. Primeira Home ML @ e≥10% max 2.20: n=173, +10.0%, t=1.62,
+      boot CI lo −1.5%, 9/11 seasons. Below La Liga paper bar — hold for vol-model retest.
+
+  LaLiga_unders_long_exp:
+    edge_threshold_by_market:
+      ou25: 0.08
+      ah: 0.05
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [ou25], min_odds: 2.20, max_odds: 3.50, allow_sides: [under]}
+    notes: "iter19 WEAK EXPERIMENTAL. SP1 Unders 2.20–3.50 @ e8% on vol06 (+6.8% n=180, only 5/10 seasons). Hold for paper only."
+
+  Championship_unders_mid_exp:
+    edge_threshold_by_market:
+      ou25: 0.12
+      ah: 0.05
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [ou25], min_odds: 2.20, max_odds: 3.50, allow_sides: [under]}
+    notes: "iter19 WEAK EXPERIMENTAL. Champ Unders 2.20–3.50 @ e12% on fresh thresh WF (+2.8% n=139, 8/10). Ranking still weak (corr λ≈0.03). Research only."
+
+  SerieA_overs_short_exp:
+    edge_threshold_by_market:
+      ou25: 0.08
+      ah: 0.05
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [ou25], min_odds: 1.50, max_odds: 2.20, allow_sides: [over]}
+    notes: "iter19 WEAK EXPERIMENTAL. Serie A short Overs 1.50–2.20 @ e8% on fresh signed WF (~+2.0% n=239, 8/10). Thin e10 bands higher ROI but fewer seasons. Research only."
+
+  Championship:
+    edge_threshold_by_market: {ou25: 0.08, ah: 0.05}
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 2.00}
+        - {markets: [ou25], min_odds: 1.50, max_odds: 3.00}
+    notes: "Mild band; OU still ≈ −5%."
+
+  Bundesliga:
+    edge_threshold_by_market: {ou25: 0.08, ah: 0.05}
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 2.00}
+        - {markets: [ou25], min_odds: 1.50, max_odds: 3.00, allow_sides: [over]}
+    notes: "Overs least-bad historically; still not +EV."
+
+  SerieA:
+    edge_threshold_by_market: {ou25: 0.08, ah: 0.05}
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 2.00}
+        - {markets: [ou25], min_odds: 1.50, max_odds: 3.00, allow_sides: [over]}
+    notes: "Overs least-bad; still not +EV."
+
+  LaLiga:
+    edge_threshold_by_market: {ou25: 0.05, ah: 0.05}
+    bet_filters:
+      enabled: true
+      rules:
+        - {markets: [1x2], max_odds: 2.00}
+        - {markets: [ou25], min_odds: 1.50, max_odds: 3.00}
+        - {markets: [ah], min_odds: 1.50, max_odds: 3.00}
+    notes: "AH healthiest; OU still negative in mild band."

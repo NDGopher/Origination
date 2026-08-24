@@ -1,0 +1,4 @@
+match_id,lineup_confirmed,lineup_strength_home,lineup_strength_away,lam_mult_home,lam_mult_away
+20260816_Arsenal_Liverpool,true,0.05,-0.02,1.0,1.0
+20260816_Chelsea_ManchesterCity,false,,,,,
+20260817_Tottenham_ManchesterUnited,true,-0.03,0.04,0.98,1.02

@@ -1,0 +1,67 @@
+# Local / secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+.env/
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data artifacts (raw downloads can be large; keep schema/docs)
+data/raw/**/*
+!data/raw/.gitkeep
+data/interim/**/*
+!data/interim/.gitkeep
+data/processed/**/*
+!data/processed/.gitkeep
+
+# Experiments & notebooks outputs
+experiments/**/*
+!experiments/.gitkeep
+notebooks/.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Model dumps
+*.joblib
+*.pkl
+*.lgb
+*.cbm
+
+# Probe / scrape artifacts
+/_probe_*
+/*_probe*.html
+
+# Credentials extras
+credentials.json
+**/secrets.*
+*.pem
+*.key
+
+# Agent / temp junk
+.cursor/
+*.tmp
+*.temp
+
+# Large regenerable parquet dumps
+*.parquet
+
