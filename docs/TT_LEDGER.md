@@ -1,6 +1,6 @@
 # Team totals - paper ledger
 
-Updated: 2026-08-24T16:13:30.871866+00:00
+Updated: 2026-08-24T21:37:34.573047+00:00
 
 Not a live pack. TRACK = team **OVER** on 0.5 / 1.5 / 2.5 (Unders not TRACK).
 TRACK threshold >=10pp vs Pin | p_over>=0.55 | CONFLICT_WATCH >=15pp.

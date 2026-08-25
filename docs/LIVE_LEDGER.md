@@ -1,6 +1,6 @@
 # Live systems — performance ledger
 
-Updated: 2026-08-24T15:48:36.207655+00:00
+Updated: 2026-08-24T21:37:34.505165+00:00
 
 Protected pack **rules are unchanged**. This is a record of flagged plays only, whether or not they were bet.
 
