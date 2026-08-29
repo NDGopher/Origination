@@ -1,6 +1,4 @@
 match_id,date,home_team,away_team
-20260824_Roma_Fiorentina,2026-08-24,Roma,Fiorentina
-20260828_ACMilan_Venezia,2026-08-28,AC Milan,Venezia
 20260829_Fiorentina_Frosinone,2026-08-29,Fiorentina,Frosinone
 20260829_Monza_Udinese,2026-08-29,Monza,Udinese
 20260829_Sassuolo_Torino,2026-08-29,Sassuolo,Torino
@@ -30,3 +28,8 @@ match_id,date,home_team,away_team
 20260913_Napoli_Bologna,2026-09-13,Napoli,Bologna
 20260913_Lazio_ACMilan,2026-09-13,Lazio,AC Milan
 20260914_Inter_Udinese,2026-09-14,Inter,Udinese
+20260918_Monza_Sassuolo,2026-09-18,Monza,Sassuolo
+20260919_Bologna_Torino,2026-09-19,Bologna,Torino
+20260919_Udinese_Cagliari,2026-09-19,Udinese,Cagliari
+20260919_Roma_Inter,2026-09-19,Roma,Inter
+20260919_Venezia_Lazio,2026-09-19,Venezia,Lazio

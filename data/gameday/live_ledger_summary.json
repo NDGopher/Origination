@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-24T21:37:34.505165+00:00",
-  "n_open": 7,
+  "updated_at": "2026-08-29T13:46:47.943503+00:00",
+  "n_open": 8,
   "n_settled": 5,
-  "n_total": 12,
+  "n_total": 13,
   "systems": [
     {
       "system_id": "EPL_unders",
@@ -66,8 +66,8 @@
         "source": "iter21 significance / EPL vol06"
       },
       "live": {
-        "n": 6,
-        "n_open": 3,
+        "n": 7,
+        "n_open": 4,
         "n_settled": 3,
         "n_decided": 3,
         "wins": 1,

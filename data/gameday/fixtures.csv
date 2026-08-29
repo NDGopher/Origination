@@ -1,6 +1,4 @@
 match_id,date,home_team,away_team
-20260828_CrystalPalace_ManchesterCity,2026-08-28,Crystal Palace,Manchester City
-20260829_Liverpool_NottinghamForest,2026-08-29,Liverpool,Nottingham Forest
 20260829_Bournemouth_Everton,2026-08-29,Bournemouth,Everton
 20260829_Coventry_Hull,2026-08-29,Coventry,Hull
 20260829_Tottenham_Newcastle,2026-08-29,Tottenham,Newcastle
@@ -29,3 +27,5 @@ match_id,date,home_team,away_team
 20260913_Coventry_Brighton,2026-09-13,Coventry,Brighton
 20260913_ManchesterUnited_ManchesterCity,2026-09-13,Manchester United,Manchester City
 20260914_Leeds_Newcastle,2026-09-14,Leeds,Newcastle
+20260918_Brentford_Chelsea,2026-09-18,Brentford,Chelsea
+20260919_Tottenham_AstonVilla,2026-09-19,Tottenham,Aston Villa

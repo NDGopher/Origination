@@ -1,5 +1,4 @@
 match_id,date,home_team,away_team
-20260828_Lille_ParisSaint-Germain,2026-08-28,Lille,Paris Saint-Germain
 20260829_Strasbourg_Lens,2026-08-29,Strasbourg,Lens
 20260829_Auxerre_Angers,2026-08-29,Auxerre,Angers
 20260829_Brest_Toulouse,2026-08-29,Brest,Toulouse
@@ -26,3 +25,11 @@ match_id,date,home_team,away_team
 20260913_Lille_Troyes,2026-09-13,Lille,Troyes
 20260913_LeMans_Lens,2026-09-13,Le Mans,Lens
 20260913_Brest_ParisSaint-Germain,2026-09-13,Brest,Paris Saint-Germain
+20260919_Angers_Troyes,2026-09-19,Angers,Troyes
+20260919_Auxerre_Brest,2026-09-19,Auxerre,Brest
+20260919_LeMans_Lorient,2026-09-19,Le Mans,Lorient
+20260919_Lyon_Rennes,2026-09-19,Lyon,Rennes
+20260919_Monaco_Lens,2026-09-19,Monaco,Lens
+20260919_Nice_Lille,2026-09-19,Nice,Lille
+20260919_ParisFC_Strasbourg,2026-09-19,Paris FC,Strasbourg
+20260919_Toulouse_LeHavre,2026-09-19,Toulouse,Le Havre

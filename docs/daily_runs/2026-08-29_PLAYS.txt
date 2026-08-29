@@ -1,0 +1,73 @@
+================================================================
+  WHAT TO BET TODAY
+================================================================
+
+  >>> PLAY #1 <<<
+  BET:     EPL Unders  →  UNDER 2.5
+  MATCH:   Coventry vs Hull  (2026-08-29)
+  PIN:     2.120  (+112)
+  FAIR:    1.472  (-212)
+  MY BOOK: (not entered — optional)
+  EDGE:    +22.4% vs Pin (need >=8%)
+  TRACK:   n=495 ROI=+9.4% · seasons+=7/10 · maxDD=-6.4u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #2 <<<
+  BET:     EPL short Overs  →  OVER 2.5
+  MATCH:   Leeds vs Brentford  (2026-08-30)
+  PIN:     1.971  (-103)
+  FAIR:    1.607  (-165)
+  MY BOOK: (not entered — optional)
+  EDGE:    +13.0% vs Pin (need >=10%)
+  TRACK:   n=202 ROI=+7.9% · seasons+=7/10 · maxDD=-3.3u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #3 <<<
+  BET:     EPL short Overs  →  OVER 2.5
+  MATCH:   Manchester United vs Ipswich  (2026-08-30)
+  PIN:     1.610  (-164)
+  FAIR:    1.413  (-242)
+  MY BOOK: (not entered — optional)
+  EDGE:    +10.3% vs Pin (need >=10%)
+  TRACK:   n=202 ROI=+7.9% · seasons+=7/10 · maxDD=-3.3u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #4 <<<
+  BET:     Serie A Away ML  →  AWAY ML
+  MATCH:   Cagliari vs Inter  (2026-08-30)
+  PIN:     1.439  (-228)
+  FAIR:    1.276  (-363)
+  MY BOOK: (not entered — optional)
+  EDGE:    +8.9% vs Pin (need >=3%)
+  TRACK:   n=246 ROI=+12.4% · seasons+=10/10 · maxDD=+0.0u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #5 <<<
+  BET:     EPL Unders  →  UNDER 2.5
+  MATCH:   Manchester City vs Coventry  (2026-09-05)
+  PIN:     3.090  (+209)
+  FAIR:    2.045  (+104)
+  MY BOOK: (not entered — optional)
+  EDGE:    +20.6% vs Pin (need >=8%)
+  TRACK:   n=495 ROI=+9.4% · seasons+=7/10 · maxDD=-6.4u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #6 <<<
+  BET:     EPL short Overs  →  OVER 2.5
+  MATCH:   Arsenal vs Chelsea  (2026-09-06)
+  PIN:     1.862  (-116)
+  FAIR:    1.619  (-162)
+  MY BOOK: (not entered — optional)
+  EDGE:    +10.1% vs Pin (need >=10%)
+  TRACK:   n=202 ROI=+7.9% · seasons+=7/10 · maxDD=-3.3u
+  ACTION:  PLACE THIS BET
+
+----------------------------------------------------------------
+  WATCH LIST (close, but not quite — usually SKIP)
+----------------------------------------------------------------
+  WATCH · Serie A Away ML · Lecce vs Roma · AWAY ML · edge 2.0% just below 3%
+  ACTION:  DO NOT BET (watch only)
+  WATCH · Primeira Liga AH e12% · Academico de Viseu vs Porto · AH HOME +1.75 · edge 11.4% just below 12%
+  ACTION:  DO NOT BET (watch only)
+
+================================================================

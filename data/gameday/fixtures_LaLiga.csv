@@ -1,11 +1,4 @@
 match_id,date,home_team,away_team
-20260824_Malaga_DeportivoLaCoruna,2026-08-24,Malaga,Deportivo La Coruna
-20260825_Valencia_RealBetis,2026-08-25,Valencia,Real Betis
-20260826_RealMadrid_RealSociedad,2026-08-26,Real Madrid,Real Sociedad
-20260827_CeltaVigo_Osasuna,2026-08-27,Celta Vigo,Osasuna
-20260827_Barcelona_AthleticClub,2026-08-27,Barcelona,Athletic Club
-20260828_RacingSantander_Elche,2026-08-28,Racing Santander,Elche
-20260828_Alaves_Villarreal,2026-08-28,Alaves,Villarreal
 20260829_Levante_RealBetis,2026-08-29,Levante,Real Betis
 20260829_RealSociedad_Espanyol,2026-08-29,Real Sociedad,Espanyol
 20260829_Sevilla_AtleticoMadrid,2026-08-29,Sevilla,Atletico Madrid
@@ -35,3 +28,12 @@ match_id,date,home_team,away_team
 20260913_RealSociedad_AtleticoMadrid,2026-09-13,Real Sociedad,Atletico Madrid
 20260913_Sevilla_Valencia,2026-09-13,Sevilla,Valencia
 20260913_Villarreal_RealBetis,2026-09-13,Villarreal,Real Betis
+20260916_Alaves_Valencia,2026-09-16,Alaves,Valencia
+20260916_AtleticoMadrid_Osasuna,2026-09-16,Atletico Madrid,Osasuna
+20260916_Barcelona_RacingSantander,2026-09-16,Barcelona,Racing Santander
+20260916_DeportivoLaCoruna_Sevilla,2026-09-16,Deportivo La Coruna,Sevilla
+20260916_Elche_RealMadrid,2026-09-16,Elche,Real Madrid
+20260916_Levante_AthleticClub,2026-09-16,Levante,Athletic Club
+20260916_Malaga_Villarreal,2026-09-16,Malaga,Villarreal
+20260916_RayoVallecano_Espanyol,2026-09-16,Rayo Vallecano,Espanyol
+20260916_RealBetis_Getafe,2026-09-16,Real Betis,Getafe

@@ -1,5 +1,4 @@
 match_id,date,home_team,away_team
-20260828_BayernMunich_VfBStuttgart,2026-08-28,Bayern Munich,VfB Stuttgart
 20260829_Elversberg_BayerLeverkusen,2026-08-29,Elversberg,Bayer Leverkusen
 20260829_FCCologne_Hoffenheim,2026-08-29,FC Cologne,Hoffenheim
 20260829_Mainz05_Paderborn,2026-08-29,Mainz 05,Paderborn
@@ -8,3 +7,27 @@ match_id,date,home_team,away_team
 20260829_BorussiaDortmund_HamburgerSV,2026-08-29,Borussia Dortmund,Hamburger SV
 20260830_Freiburg_WerderBremen,2026-08-30,Freiburg,Werder Bremen
 20260830_Augsburg_Schalke04,2026-08-30,Augsburg,Schalke 04
+20260904_VfBStuttgart_FCCologne,2026-09-04,VfB Stuttgart,FC Cologne
+20260905_BayerLeverkusen_UnionBerlin,2026-09-05,Bayer Leverkusen,Union Berlin
+20260905_BorussiaM.Gladbach_Elversberg,2026-09-05,Borussia M.Gladbach,Elversberg
+20260905_Hoffenheim_BorussiaDortmund,2026-09-05,Hoffenheim,Borussia Dortmund
+20260905_Paderborn_Freiburg,2026-09-05,Paderborn,Freiburg
+20260905_WerderBremen_RBLeipzig,2026-09-05,Werder Bremen,RB Leipzig
+20260905_Schalke04_BayernMunich,2026-09-05,Schalke 04,Bayern Munich
+20260906_HamburgerSV_Mainz05,2026-09-06,Hamburger SV,Mainz 05
+20260906_EintrachtFrankfurt_Augsburg,2026-09-06,Eintracht Frankfurt,Augsburg
+20260911_UnionBerlin_Schalke04,2026-09-11,Union Berlin,Schalke 04
+20260912_Augsburg_BayerLeverkusen,2026-09-12,Augsburg,Bayer Leverkusen
+20260912_BorussiaDortmund_Paderborn,2026-09-12,Borussia Dortmund,Paderborn
+20260912_Freiburg_BorussiaM.Gladbach,2026-09-12,Freiburg,Borussia M.Gladbach
+20260912_Hoffenheim_VfBStuttgart,2026-09-12,Hoffenheim,VfB Stuttgart
+20260912_Mainz05_EintrachtFrankfurt,2026-09-12,Mainz 05,Eintracht Frankfurt
+20260912_FCCologne_WerderBremen,2026-09-12,FC Cologne,Werder Bremen
+20260913_RBLeipzig_HamburgerSV,2026-09-13,RB Leipzig,Hamburger SV
+20260913_Elversberg_BayernMunich,2026-09-13,Elversberg,Bayern Munich
+20260918_BayernMunich_UnionBerlin,2026-09-18,Bayern Munich,Union Berlin
+20260919_BorussiaM.Gladbach_Mainz05,2026-09-19,Borussia M.Gladbach,Mainz 05
+20260919_EintrachtFrankfurt_Freiburg,2026-09-19,Eintracht Frankfurt,Freiburg
+20260919_HamburgerSV_FCCologne,2026-09-19,Hamburger SV,FC Cologne
+20260919_WerderBremen_Augsburg,2026-09-19,Werder Bremen,Augsburg
+20260919_VfBStuttgart_BorussiaDortmund,2026-09-19,VfB Stuttgart,Borussia Dortmund

@@ -1,15 +1,15 @@
 # Team totals - paper ledger
 
-Updated: 2026-08-24T21:37:34.573047+00:00
+Updated: 2026-08-29T14:02:49.405833+00:00
 
 Not a live pack. TRACK = team **OVER** on 0.5 / 1.5 / 2.5 (Unders not TRACK).
 TRACK threshold >=10pp vs Pin | p_over>=0.55 | CONFLICT_WATCH >=15pp.
 
 Research: [`TT_OVER_PIN_VALUE.md`](../experiments/score_predictions/TT_OVER_PIN_VALUE.md).
 
-**TRACK:** open 20 | settled 6 | W-L 2-4 | units -2.80u | ROI -46.7%
+**TRACK:** open 27 | settled 6 | W-L 2-4 | units -2.80u | ROI -46.7%
 
-**CONFLICT_WATCH:** open 5 | settled 7 | hit 43%
+**CONFLICT_WATCH:** open 11 | settled 7 | hit 43%
 
 Units use **real Pin Over odds** from the day logged. Flat-2.00 historical ROIs are not used for promotion.
 
@@ -55,6 +55,20 @@ Units use **real Pin Over odds** from the day logged. Flat-2.00 historical ROIs 
   - why: proj 0.84 goals | line 0.5 | model O/U 57/43% | U+9.5pp | low total · GF 0.5+— · form 0.4/— ppg
 - 2026-08-24 | **Roma** OVER 1.5 @ 1.769 | O+9.4pp | Roma vs Fiorentina (SerieA)
   - why: proj 2.18 goals | line 1.5 | model O/U 64/36% | O+9.4pp | high total · score-adj -0.15 · xG 1.8+0.9 · Elo H+109 · form 2.6/1.2 ppg · weak 
+- 2026-08-29 | **Lommel** OVER 0.5 @ 1.457 | O+13.6pp | Cercle Brugge vs Lommel (Belgium)
+  - why: proj 1.64 goals | line 0.5 | model O/U 81/19% | O+13.6pp | score-adj -0.10 · GF 2.1+0.4 · form 1.0/0.5 ppg · weak O/U hist
+- 2026-08-29 | **Lorient** OVER 1.5 @ 2.07 | O+13.1pp | Lorient vs Troyes (Ligue1)
+  - why: proj 2.0 goals | line 1.5 | model O/U 59/41% | O+13.1pp | xG 1.5+0.5 · Elo H+166 · form 1.0/0.4 ppg · leaky def · weak O/U hist
+- 2026-08-30 | **Inter** OVER 1.5 @ 1.606 | O+13.9pp | Cagliari vs Inter (SerieA)
+  - why: proj 2.65 goals | line 1.5 | model O/U 74/26% | O+13.9pp | high total · score-adj -0.15 · xG 1.7+2.0 · Elo A-300 · form 2.0/1.8 ppg · leaky
+- 2026-08-30 | **Feyenoord** OVER 2.5 @ 1.556 | O+13.0pp | Feyenoord vs ADO Den Haag (Eredivisie)
+  - why: proj 3.93 goals | line 2.5 | model O/U 75/25% | O+13.0pp | high total · GF 1.6+0.9 · Elo H+326 · form 2.2/0.6 ppg · leaky def
+- 2026-08-30 | **Anderlecht** OVER 0.5 @ 1.521 | O+12.8pp | Union Saint-Gilloise vs Anderlecht (Belgium)
+  - why: proj 1.44 goals | line 0.5 | model O/U 76/24% | O+12.8pp | score-adj -0.10 · GF —+1.7 · Elo H—/A1593 · form —/1.6 ppg · weak O/U hist
+- 2026-08-30 | **Brighton** OVER 0.5 @ 1.405 | O+10.4pp | Chelsea vs Brighton (EPL)
+  - why: proj 1.6 goals | line 0.5 | model O/U 80/20% | O+10.4pp | high total · xG 1.3+1.6 · form 0.8/1.2 ppg · leaky def
+- 2026-08-30 | **Valencia** OVER 0.5 @ 1.452 | O+10.0pp | Deportivo La Coruna vs Valencia (LaLiga)
+  - why: proj 1.47 goals | line 0.5 | model O/U 77/23% | O+10.0pp | low total · xG 1.4+1.4 · Elo A-137 · form 0.4/2.2 ppg · short rest 3d
 
 ## Settled TRACK
 

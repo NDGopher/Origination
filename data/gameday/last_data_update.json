@@ -1,86 +1,82 @@
 {
   "odds": {
-    "updated_at": "2026-08-24T21:30:00.734122+00:00",
+    "updated_at": "2026-08-29T13:39:00.281523+00:00",
     "leagues": {
       "EPL": {
         "ok": true,
-        "n_fixtures": 30,
-        "n_with_ou25": 20,
-        "n_with_1x2": 20,
-        "n_with_ah": 20,
-        "fetched_at": "2026-08-24T21:29:53.799687+00:00"
+        "n_fixtures": 31,
+        "n_with_ou25": 18,
+        "n_with_1x2": 18,
+        "n_with_ah": 18,
+        "fetched_at": "2026-08-29T13:38:49.850543+00:00"
       },
       "Bundesliga": {
         "ok": true,
-        "n_fixtures": 9,
-        "n_with_ou25": 8,
-        "n_with_1x2": 9,
-        "n_with_ah": 9,
-        "fetched_at": "2026-08-24T21:29:54.356275+00:00"
+        "n_fixtures": 32,
+        "n_with_ou25": 3,
+        "n_with_1x2": 3,
+        "n_with_ah": 3,
+        "fetched_at": "2026-08-29T13:38:50.998502+00:00"
       },
       "LaLiga": {
         "ok": true,
-        "n_fixtures": 36,
-        "n_with_ou25": 14,
-        "n_with_1x2": 14,
-        "n_with_ah": 14,
-        "fetched_at": "2026-08-24T21:29:54.984990+00:00"
+        "n_fixtures": 38,
+        "n_with_ou25": 8,
+        "n_with_1x2": 8,
+        "n_with_ah": 8,
+        "fetched_at": "2026-08-29T13:38:51.105823+00:00"
       },
       "SerieA": {
         "ok": true,
-        "n_fixtures": 31,
-        "n_with_ou25": 10,
-        "n_with_1x2": 10,
-        "n_with_ah": 10,
-        "fetched_at": "2026-08-24T21:29:55.637930+00:00"
+        "n_fixtures": 34,
+        "n_with_ou25": 19,
+        "n_with_1x2": 19,
+        "n_with_ah": 19,
+        "fetched_at": "2026-08-29T13:38:51.246530+00:00"
       },
       "PrimeiraLiga": {
         "ok": true,
-        "n_fixtures": 9,
-        "n_with_ou25": 9,
-        "n_with_1x2": 9,
-        "n_with_ah": 9,
-        "fetched_at": "2026-08-24T21:29:56.299741+00:00"
+        "n_fixtures": 8,
+        "n_with_ou25": 8,
+        "n_with_1x2": 7,
+        "n_with_ah": 8,
+        "fetched_at": "2026-08-29T13:38:51.356993+00:00"
       },
       "Championship": {
         "ok": true,
-        "n_fixtures": 12,
-        "n_with_ou25": 12,
-        "n_with_1x2": 12,
-        "n_with_ah": 12,
-        "fetched_at": "2026-08-24T21:29:56.901732+00:00"
+        "n_fixtures": 8,
+        "n_with_ou25": 8,
+        "n_with_1x2": 8,
+        "n_with_ah": 8,
+        "fetched_at": "2026-08-29T13:38:51.462636+00:00"
       },
       "Ligue1": {
         "ok": true,
-        "n_fixtures": 27,
-        "n_with_ou25": 9,
-        "n_with_1x2": 9,
-        "n_with_ah": 9,
-        "fetched_at": "2026-08-24T21:29:57.620700+00:00"
+        "n_fixtures": 34,
+        "n_with_ou25": 8,
+        "n_with_1x2": 8,
+        "n_with_ah": 8,
+        "fetched_at": "2026-08-29T13:38:52.615945+00:00"
       },
       "Eredivisie": {
         "ok": true,
-        "n_fixtures": 9,
-        "n_with_ou25": 9,
-        "n_with_1x2": 9,
-        "n_with_ah": 9,
-        "fetched_at": "2026-08-24T21:29:58.229121+00:00"
+        "n_fixtures": 8,
+        "n_with_ou25": 8,
+        "n_with_1x2": 8,
+        "n_with_ah": 8,
+        "fetched_at": "2026-08-29T13:38:55.788099+00:00"
       },
       "Belgium": {
         "ok": true,
-        "n_fixtures": 7,
-        "n_with_ou25": 7,
-        "n_with_1x2": 7,
-        "n_with_ah": 7,
-        "fetched_at": "2026-08-24T21:29:58.862106+00:00"
+        "n_fixtures": 8,
+        "n_with_ou25": 8,
+        "n_with_1x2": 8,
+        "n_with_ah": 8,
+        "fetched_at": "2026-08-29T13:38:55.893215+00:00"
       },
       "MLS": {
-        "ok": true,
-        "n_fixtures": 15,
-        "n_with_ou25": 15,
-        "n_with_1x2": 15,
-        "n_with_ah": 15,
-        "fetched_at": "2026-08-24T21:29:59.533731+00:00"
+        "ok": false,
+        "error": "no_fixtures"
       },
       "Scotland": {
         "ok": true,
@@ -88,22 +84,22 @@
         "n_with_ou25": 6,
         "n_with_1x2": 6,
         "n_with_ah": 6,
-        "fetched_at": "2026-08-24T21:30:00.054237+00:00"
+        "fetched_at": "2026-08-29T13:38:56.082003+00:00"
       },
       "Turkey": {
         "ok": true,
-        "n_fixtures": 9,
-        "n_with_ou25": 9,
-        "n_with_1x2": 9,
-        "n_with_ah": 9,
-        "fetched_at": "2026-08-24T21:30:00.712986+00:00"
+        "n_fixtures": 8,
+        "n_with_ou25": 8,
+        "n_with_1x2": 8,
+        "n_with_ah": 8,
+        "fetched_at": "2026-08-29T13:39:00.281368+00:00"
       }
     }
   },
-  "updated_at_odds": "2026-08-24T21:30:00.734122+00:00",
+  "updated_at_odds": "2026-08-29T13:39:00.281523+00:00",
   "model": {
     "kind": "full_model_refresh",
-    "updated_at": "2026-08-24T21:29:39.360424+00:00",
+    "updated_at": "2026-08-29T13:29:29.741786+00:00",
     "ok": false,
     "force_season": 2026,
     "leagues": [
@@ -131,44 +127,44 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 4560
+            "n": 4570
           },
           {
             "step": "understat",
             "ok": true,
-            "n": 4569
+            "n": 4571
           },
           {
             "step": "pulse_completed",
             "ok": true,
-            "n": 10
+            "n": 11
           },
           {
             "step": "align",
             "ok": true,
-            "n": 4596
+            "n": 4597
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 4596,
-            "n_feature_rows": 4596,
+            "n_matches": 4597,
+            "n_feature_rows": 4597,
             "n_feature_cols": 240,
-            "path": "C:\\Origination\\data\\processed\\features_EPL.parquet"
+            "path": "/workspace/data/processed/features_EPL.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 30,
+            "n": 31,
             "source": "premierleague_pulse"
           }
         ],
         "current_season": {
-          "n": 10,
-          "n_football_data": 0,
-          "n_extra": 10,
-          "n_xg": 9,
-          "latest": "2026-08-24"
+          "n": 11,
+          "n_football_data": 10,
+          "n_extra": 1,
+          "n_xg": 11,
+          "latest": "2026-08-28"
         }
       },
       {
@@ -183,34 +179,34 @@
           {
             "step": "understat",
             "ok": true,
-            "n": 3672
+            "n": 3673
           },
           {
             "step": "align",
             "ok": true,
-            "n": 3673
+            "n": 3674
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 3673,
-            "n_feature_rows": 3673,
+            "n_matches": 3674,
+            "n_feature_rows": 3674,
             "n_feature_cols": 228,
-            "path": "C:\\Origination\\data\\processed\\features_Bundesliga.parquet"
+            "path": "/workspace/data/processed/features_Bundesliga.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 9,
-            "source": "pinnacle_matchups"
+            "n": 32,
+            "source": "understat"
           }
         ],
         "current_season": {
-          "n": 0,
+          "n": 1,
           "n_football_data": 0,
-          "n_extra": 0,
-          "n_xg": 0,
-          "latest": null
+          "n_extra": 1,
+          "n_xg": 1,
+          "latest": "2026-08-28"
         }
       },
       {
@@ -220,39 +216,39 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 4567
+            "n": 4580
           },
           {
             "step": "understat",
             "ok": true,
-            "n": 4575
+            "n": 4582
           },
           {
             "step": "align",
             "ok": true,
-            "n": 4647
+            "n": 4652
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 4647,
-            "n_feature_rows": 4647,
+            "n_matches": 4652,
+            "n_feature_rows": 4652,
             "n_feature_cols": 228,
-            "path": "C:\\Origination\\data\\processed\\features_LaLiga.parquet"
+            "path": "/workspace/data/processed/features_LaLiga.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 36,
+            "n": 38,
             "source": "understat"
           }
         ],
         "current_season": {
-          "n": 17,
-          "n_football_data": 7,
-          "n_extra": 10,
-          "n_xg": 17,
-          "latest": "2026-08-24"
+          "n": 22,
+          "n_football_data": 20,
+          "n_extra": 2,
+          "n_xg": 22,
+          "latest": "2026-08-28"
         }
       },
       {
@@ -262,39 +258,39 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 4560
+            "n": 4570
           },
           {
             "step": "understat",
             "ok": true,
-            "n": 4569
+            "n": 4571
           },
           {
             "step": "align",
             "ok": true,
-            "n": 4582
+            "n": 4584
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 4582,
-            "n_feature_rows": 4582,
+            "n_matches": 4584,
+            "n_feature_rows": 4584,
             "n_feature_cols": 228,
-            "path": "C:\\Origination\\data\\processed\\features_SerieA.parquet"
+            "path": "/workspace/data/processed/features_SerieA.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 31,
+            "n": 34,
             "source": "understat"
           }
         ],
         "current_season": {
-          "n": 9,
-          "n_football_data": 0,
-          "n_extra": 9,
-          "n_xg": 9,
-          "latest": "2026-08-24"
+          "n": 11,
+          "n_football_data": 10,
+          "n_extra": 1,
+          "n_xg": 11,
+          "latest": "2026-08-28"
         }
       },
       {
@@ -304,7 +300,7 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 3689
+            "n": 3696
           },
           {
             "step": "understat",
@@ -314,29 +310,29 @@
           {
             "step": "align",
             "ok": true,
-            "n": 3689
+            "n": 3696
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 3689,
-            "n_feature_rows": 3689,
+            "n_matches": 3696,
+            "n_feature_rows": 3696,
             "n_feature_cols": 101,
-            "path": "C:\\Origination\\data\\processed\\features_PrimeiraLiga.parquet"
+            "path": "/workspace/data/processed/features_PrimeiraLiga.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 9,
+            "n": 8,
             "source": "pinnacle_matchups"
           }
         ],
         "current_season": {
-          "n": 17,
-          "n_football_data": 17,
+          "n": 24,
+          "n_football_data": 24,
           "n_extra": 0,
-          "n_xg": 17,
-          "latest": "2026-08-17"
+          "n_xg": 24,
+          "latest": "2026-08-24"
         }
       },
       {
@@ -346,39 +342,39 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 4237
+            "n": 4246
           },
           {
             "step": "understat",
             "ok": true,
-            "n": 4246
+            "n": 4247
           },
           {
             "step": "align",
             "ok": true,
-            "n": 4860
+            "n": 4862
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 4860,
-            "n_feature_rows": 4860,
+            "n_matches": 4862,
+            "n_feature_rows": 4862,
             "n_feature_cols": 228,
-            "path": "C:\\Origination\\data\\processed\\features_Ligue1.parquet"
+            "path": "/workspace/data/processed/features_Ligue1.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 27,
+            "n": 34,
             "source": "understat"
           }
         ],
         "current_season": {
-          "n": 9,
-          "n_football_data": 0,
-          "n_extra": 9,
-          "n_xg": 9,
-          "latest": "2026-08-23"
+          "n": 11,
+          "n_football_data": 9,
+          "n_extra": 2,
+          "n_xg": 11,
+          "latest": "2026-08-28"
         }
       },
       {
@@ -388,7 +384,7 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 3616
+            "n": 3622
           },
           {
             "step": "understat",
@@ -398,29 +394,29 @@
           {
             "step": "align",
             "ok": true,
-            "n": 3616
+            "n": 3622
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 3616,
-            "n_feature_rows": 3616,
+            "n_matches": 3622,
+            "n_feature_rows": 3622,
             "n_feature_cols": 101,
-            "path": "C:\\Origination\\data\\processed\\features_Eredivisie.parquet"
+            "path": "/workspace/data/processed/features_Eredivisie.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 9,
+            "n": 8,
             "source": "pinnacle_matchups"
           }
         ],
         "current_season": {
-          "n": 18,
-          "n_football_data": 18,
+          "n": 24,
+          "n_football_data": 24,
           "n_extra": 0,
-          "n_xg": 18,
-          "latest": "2026-08-16"
+          "n_xg": 24,
+          "latest": "2026-08-23"
         }
       },
       {
@@ -430,7 +426,7 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 3303
+            "n": 3309
           },
           {
             "step": "understat",
@@ -440,29 +436,29 @@
           {
             "step": "align",
             "ok": true,
-            "n": 3295
+            "n": 3301
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 3295,
-            "n_feature_rows": 3295,
+            "n_matches": 3301,
+            "n_feature_rows": 3301,
             "n_feature_cols": 101,
-            "path": "C:\\Origination\\data\\processed\\features_Belgium.parquet"
+            "path": "/workspace/data/processed/features_Belgium.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 7,
+            "n": 8,
             "source": "pinnacle_matchups"
           }
         ],
         "current_season": {
-          "n": 18,
-          "n_football_data": 18,
+          "n": 24,
+          "n_football_data": 24,
           "n_extra": 0,
-          "n_xg": 18,
-          "latest": "2026-08-16"
+          "n_xg": 24,
+          "latest": "2026-08-23"
         }
       },
       {
@@ -472,7 +468,7 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 6636
+            "n": 6648
           },
           {
             "step": "understat",
@@ -482,29 +478,29 @@
           {
             "step": "align",
             "ok": true,
-            "n": 6636
+            "n": 6648
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 6636,
-            "n_feature_rows": 6636,
+            "n_matches": 6648,
+            "n_feature_rows": 6648,
             "n_feature_cols": 137,
-            "path": "C:\\Origination\\data\\processed\\features_Championship.parquet"
+            "path": "/workspace/data/processed/features_Championship.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 12,
+            "n": 8,
             "source": "pinnacle_matchups"
           }
         ],
         "current_season": {
-          "n": 12,
-          "n_football_data": 12,
+          "n": 24,
+          "n_football_data": 24,
           "n_extra": 0,
-          "n_xg": 12,
-          "latest": "2026-08-17"
+          "n_xg": 24,
+          "latest": "2026-08-23"
         }
       },
       {
@@ -520,7 +516,7 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 4015
+            "n": 4024
           },
           {
             "step": "understat",
@@ -530,29 +526,29 @@
           {
             "step": "align",
             "ok": true,
-            "n": 3985
+            "n": 3994
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 3985,
-            "n_feature_rows": 3985,
+            "n_matches": 3994,
+            "n_feature_rows": 3994,
             "n_feature_cols": 101,
-            "path": "C:\\Origination\\data\\processed\\features_Turkey.parquet"
+            "path": "/workspace/data/processed/features_Turkey.parquet"
           },
           {
             "step": "fixtures",
             "ok": true,
-            "n": 9,
+            "n": 8,
             "source": "pinnacle_matchups"
           }
         ],
         "current_season": {
-          "n": 9,
-          "n_football_data": 9,
+          "n": 18,
+          "n_football_data": 18,
           "n_extra": 0,
-          "n_xg": 9,
-          "latest": "2026-08-17"
+          "n_xg": 18,
+          "latest": "2026-08-24"
         }
       },
       {
@@ -562,7 +558,7 @@
           {
             "step": "football_data",
             "ok": true,
-            "n": 2699
+            "n": 2472
           },
           {
             "step": "understat",
@@ -572,15 +568,15 @@
           {
             "step": "align",
             "ok": true,
-            "n": 2699
+            "n": 2472
           },
           {
             "step": "features",
             "ok": true,
-            "n_matches": 2699,
-            "n_feature_rows": 2699,
+            "n_matches": 2472,
+            "n_feature_rows": 2472,
             "n_feature_cols": 101,
-            "path": "C:\\Origination\\data\\processed\\features_Scotland.parquet"
+            "path": "/workspace/data/processed/features_Scotland.parquet"
           },
           {
             "step": "fixtures",
@@ -590,95 +586,95 @@
           }
         ],
         "current_season": {
-          "n": 11,
-          "n_football_data": 11,
+          "n": 12,
+          "n_football_data": 12,
           "n_extra": 0,
-          "n_xg": 11,
-          "latest": "2026-08-09"
+          "n_xg": 12,
+          "latest": "2026-08-22"
         }
       }
     ],
     "current_season": {
       "Ligue1": {
-        "n": 9,
-        "n_football_data": 0,
-        "n_extra": 9,
-        "n_xg": 9,
-        "latest": "2026-08-23"
+        "n": 11,
+        "n_football_data": 9,
+        "n_extra": 2,
+        "n_xg": 11,
+        "latest": "2026-08-28"
       },
       "Eredivisie": {
-        "n": 18,
-        "n_football_data": 18,
+        "n": 24,
+        "n_football_data": 24,
         "n_extra": 0,
-        "n_xg": 18,
-        "latest": "2026-08-16"
+        "n_xg": 24,
+        "latest": "2026-08-23"
       },
       "Belgium": {
+        "n": 24,
+        "n_football_data": 24,
+        "n_extra": 0,
+        "n_xg": 24,
+        "latest": "2026-08-23"
+      },
+      "Championship": {
+        "n": 24,
+        "n_football_data": 24,
+        "n_extra": 0,
+        "n_xg": 24,
+        "latest": "2026-08-23"
+      },
+      "Turkey": {
         "n": 18,
         "n_football_data": 18,
         "n_extra": 0,
         "n_xg": 18,
-        "latest": "2026-08-16"
+        "latest": "2026-08-24"
       },
-      "Championship": {
+      "Scotland": {
         "n": 12,
         "n_football_data": 12,
         "n_extra": 0,
         "n_xg": 12,
-        "latest": "2026-08-17"
-      },
-      "Turkey": {
-        "n": 9,
-        "n_football_data": 9,
-        "n_extra": 0,
-        "n_xg": 9,
-        "latest": "2026-08-17"
-      },
-      "Scotland": {
-        "n": 11,
-        "n_football_data": 11,
-        "n_extra": 0,
-        "n_xg": 11,
-        "latest": "2026-08-09"
+        "latest": "2026-08-22"
       },
       "EPL": {
-        "n": 10,
-        "n_football_data": 0,
-        "n_extra": 10,
-        "n_xg": 9,
-        "latest": "2026-08-24"
+        "n": 11,
+        "n_football_data": 10,
+        "n_extra": 1,
+        "n_xg": 11,
+        "latest": "2026-08-28"
       },
       "Bundesliga": {
-        "n": 0,
+        "n": 1,
         "n_football_data": 0,
-        "n_extra": 0,
-        "n_xg": 0,
-        "latest": null
+        "n_extra": 1,
+        "n_xg": 1,
+        "latest": "2026-08-28"
       },
       "LaLiga": {
-        "n": 17,
-        "n_football_data": 7,
-        "n_extra": 10,
-        "n_xg": 17,
-        "latest": "2026-08-24"
+        "n": 22,
+        "n_football_data": 20,
+        "n_extra": 2,
+        "n_xg": 22,
+        "latest": "2026-08-28"
       },
       "SerieA": {
-        "n": 9,
-        "n_football_data": 0,
-        "n_extra": 9,
-        "n_xg": 9,
-        "latest": "2026-08-24"
+        "n": 11,
+        "n_football_data": 10,
+        "n_extra": 1,
+        "n_xg": 11,
+        "latest": "2026-08-28"
       },
       "PrimeiraLiga": {
-        "n": 17,
-        "n_football_data": 17,
+        "n": 24,
+        "n_football_data": 24,
         "n_extra": 0,
-        "n_xg": 17,
-        "latest": "2026-08-17"
+        "n_xg": 24,
+        "latest": "2026-08-24"
       }
     }
   },
-  "updated_at_model": "2026-08-24T21:29:39.360424+00:00",
+  "updated_at_model": "2026-08-29T13:29:29.741786+00:00",
   "data": {
     "kind": "data",
     "updated_at": "2026-08-24T21:26:45.707658+00:00",
