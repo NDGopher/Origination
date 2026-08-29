@@ -46,7 +46,13 @@ LIVE_LEAGUES = ["EPL", "Bundesliga", "LaLiga", "SerieA", "PrimeiraLiga"]
 
 
 def _py() -> Path:
-    return ROOT / ".venv" / "Scripts" / "python.exe"
+    win = ROOT / ".venv" / "Scripts" / "python.exe"
+    unix = ROOT / ".venv" / "bin" / "python"
+    if win.exists():
+        return win
+    if unix.exists():
+        return unix
+    return Path(sys.executable)
 
 
 def _f(x) -> float | None:

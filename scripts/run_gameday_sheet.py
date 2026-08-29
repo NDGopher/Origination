@@ -129,8 +129,14 @@ def main() -> None:
     set_global_seed(int(cfg.get("project", {}).get("seed", 42)))
     data_dir = resolve_data_dir(cfg)
 
-    py = ROOT / ".venv" / "Scripts" / "python.exe"
-    py_exe = str(py if py.exists() else sys.executable)
+    win = ROOT / ".venv" / "Scripts" / "python.exe"
+    unix = ROOT / ".venv" / "bin" / "python"
+    if win.exists():
+        py_exe = str(win)
+    elif unix.exists():
+        py_exe = str(unix)
+    else:
+        py_exe = sys.executable
 
     if args.update_data and league_key == "EPL":
         logger.info("Updating data pipeline…")
