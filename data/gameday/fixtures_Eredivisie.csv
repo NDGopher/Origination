@@ -1,9 +1,10 @@
 match_id,date,home_team,away_team
-20260829_Excelsior_SpartaRotterdam,2026-08-29,Excelsior,Sparta Rotterdam
-20260829_AZAlkmaar_GoAheadEagles,2026-08-29,AZ Alkmaar,Go Ahead Eagles
-20260829_PECZwolle_NECNijmegen,2026-08-29,PEC Zwolle,NEC Nijmegen
-20260830_Utrecht_PSVEindhoven,2026-08-30,Utrecht,PSV Eindhoven
-20260830_Feyenoord_ADODenHaag,2026-08-30,Feyenoord,ADO Den Haag
-20260830_WillemII_Heerenveen,2026-08-30,Willem II,Heerenveen
-20260830_Telstar_Ajax,2026-08-30,Telstar,Ajax
-20260830_Cambuur_FCTwente,2026-08-30,Cambuur,FC Twente
+20260904_SpartaRotterdam_PECZwolle,2026-09-04,Sparta Rotterdam,PEC Zwolle
+20260905_NECNijmegen_Feyenoord,2026-09-05,NEC Nijmegen,Feyenoord
+20260905_Utrecht_GoAheadEagles,2026-09-05,Utrecht,Go Ahead Eagles
+20260905_Ajax_PSVEindhoven,2026-09-05,Ajax,PSV Eindhoven
+20260905_WillemII_Excelsior,2026-09-05,Willem II,Excelsior
+20260906_Groningen_FCTwente,2026-09-06,Groningen,FC Twente
+20260906_Heerenveen_AZAlkmaar,2026-09-06,Heerenveen,AZ Alkmaar
+20260906_Telstar_Cambuur,2026-09-06,Telstar,Cambuur
+20260906_ADODenHaag_FortunaSittard,2026-09-06,ADO Den Haag,Fortuna Sittard

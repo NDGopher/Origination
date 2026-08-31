@@ -1,0 +1,91 @@
+================================================================
+  WHAT TO BET TODAY
+================================================================
+
+  >>> PLAY #1 <<<
+  BET:     Bundesliga Unders  →  UNDER 2.5
+  MATCH:   Paderborn vs Freiburg  (2026-09-05)
+  PIN:     2.260  (+126)
+  FAIR:    1.529  (-189)
+  MY BOOK: (not entered — optional)
+  EDGE:    +22.9% vs Pin (need >=10%)
+  TRACK:   n=161 ROI=+8.6% · seasons+=8/10 · maxDD=-1.7u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #2 <<<
+  BET:     EPL Unders  →  UNDER 2.5
+  MATCH:   Manchester City vs Coventry  (2026-09-05)
+  PIN:     3.230  (+223)
+  FAIR:    1.804  (-124)
+  MY BOOK: (not entered — optional)
+  EDGE:    +27.7% vs Pin (need >=8%)
+  TRACK:   n=495 ROI=+9.4% · seasons+=7/10 · maxDD=-6.4u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #3 <<<
+  BET:     La Liga Home ML  →  HOME ML
+  MATCH:   Villarreal vs Deportivo La Coruna  (2026-09-05)
+  PIN:     1.524  (-191)
+  FAIR:    1.204  (-489)
+  MY BOOK: (not entered — optional)
+  EDGE:    +17.4% vs Pin (need >=8%)
+  TRACK:   n=124 ROI=+20.3% · seasons+=8/10 · maxDD=-2.0u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #4 <<<
+  BET:     EPL short Overs  →  OVER 2.5
+  MATCH:   Arsenal vs Chelsea  (2026-09-06)
+  PIN:     1.800  (-125)
+  FAIR:    1.568  (-176)
+  MY BOOK: (not entered — optional)
+  EDGE:    +10.2% vs Pin (need >=10%)
+  TRACK:   n=202 ROI=+7.9% · seasons+=7/10 · maxDD=-3.3u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #5 <<<
+  BET:     EPL short Overs  →  OVER 2.5
+  MATCH:   Crystal Palace vs Ipswich  (2026-09-12)
+  PIN:     1.980  (-102)
+  FAIR:    1.420  (-238)
+  MY BOOK: (not entered — optional)
+  EDGE:    +22.1% vs Pin (need >=10%)
+  TRACK:   n=202 ROI=+7.9% · seasons+=7/10 · maxDD=-3.3u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #6 <<<
+  BET:     Serie A Away ML  →  AWAY ML
+  MATCH:   Sassuolo vs Juventus  (2026-09-12)
+  PIN:     1.599  (-167)
+  FAIR:    1.453  (-221)
+  MY BOOK: (not entered — optional)
+  EDGE:    +6.3% vs Pin (need >=3%)
+  TRACK:   n=246 ROI=+12.4% · seasons+=10/10 · maxDD=+0.0u
+  ACTION:  PLACE THIS BET
+
+  >>> PLAY #7 <<<
+  BET:     EPL Unders  →  UNDER 2.5
+  MATCH:   Coventry vs Brighton  (2026-09-13)
+  PIN:     2.060  (+106)
+  FAIR:    1.482  (-207)
+  MY BOOK: (not entered — optional)
+  EDGE:    +21.4% vs Pin (need >=8%)
+  TRACK:   n=495 ROI=+9.4% · seasons+=7/10 · maxDD=-6.4u
+  ACTION:  PLACE THIS BET
+
+----------------------------------------------------------------
+  WATCH LIST (close, but not quite — usually SKIP)
+----------------------------------------------------------------
+  WATCH · EPL short Overs · Ipswich vs Liverpool · OVER 2.5 · odds 1.53 just below band 1.60
+  ACTION:  DO NOT BET (watch only)
+  WATCH · EPL short Overs · Bournemouth vs Brentford · OVER 2.5 · edge 8.9% just below 10%
+  ACTION:  DO NOT BET (watch only)
+  WATCH · La Liga Home ML · Celta Vigo vs Malaga · HOME ML · edge 7.7% just below 8%
+  ACTION:  DO NOT BET (watch only)
+  WATCH · Serie A Away ML · Lecce vs Roma · AWAY ML · edge 2.2% just below 3%
+  ACTION:  DO NOT BET (watch only)
+  WATCH · Serie A Away ML · Torino vs Roma · AWAY ML · edge 2.1% just below 3%
+  ACTION:  DO NOT BET (watch only)
+  WATCH · Primeira Liga AH e12% · Sporting Braga vs Vitoria Guimaraes · AH HOME -0.50 · edge 10.6% just below 12%
+  ACTION:  DO NOT BET (watch only)
+
+================================================================

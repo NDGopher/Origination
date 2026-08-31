@@ -1,11 +1,4 @@
 match_id,date,home_team,away_team
-20260829_Bournemouth_Everton,2026-08-29,Bournemouth,Everton
-20260829_Coventry_Hull,2026-08-29,Coventry,Hull
-20260829_Tottenham_Newcastle,2026-08-29,Tottenham,Newcastle
-20260830_Chelsea_Brighton,2026-08-30,Chelsea,Brighton
-20260830_Leeds_Brentford,2026-08-30,Leeds,Brentford
-20260830_Sunderland_Fulham,2026-08-30,Sunderland,Fulham
-20260830_ManchesterUnited_Ipswich,2026-08-30,Manchester United,Ipswich
 20260831_AstonVilla_Arsenal,2026-08-31,Aston Villa,Arsenal
 20260904_Ipswich_Liverpool,2026-09-04,Ipswich,Liverpool
 20260905_Newcastle_Bournemouth,2026-09-05,Newcastle,Bournemouth
@@ -29,3 +22,11 @@ match_id,date,home_team,away_team
 20260914_Leeds_Newcastle,2026-09-14,Leeds,Newcastle
 20260918_Brentford_Chelsea,2026-09-18,Brentford,Chelsea
 20260919_Tottenham_AstonVilla,2026-09-19,Tottenham,Aston Villa
+20260919_Brighton_Arsenal,2026-09-19,Brighton,Arsenal
+20260919_Everton_Ipswich,2026-09-19,Everton,Ipswich
+20260919_Leeds_CrystalPalace,2026-09-19,Leeds,Crystal Palace
+20260919_Newcastle_Hull,2026-09-19,Newcastle,Hull
+20260919_NottinghamForest_Coventry,2026-09-19,Nottingham Forest,Coventry
+20260920_Bournemouth_Liverpool,2026-09-20,Bournemouth,Liverpool
+20260920_ManchesterCity_Sunderland,2026-09-20,Manchester City,Sunderland
+20260920_Fulham_ManchesterUnited,2026-09-20,Fulham,Manchester United

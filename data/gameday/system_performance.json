@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-29T13:46:47.943503+00:00",
+  "updated_at": "2026-08-31T14:41:14.953753+00:00",
   "ledger_start": "2026-08-14",
   "recent_n": 15,
   "n_open": 8,
-  "n_settled": 5,
-  "n_total": 13,
+  "n_settled": 10,
+  "n_total": 18,
   "systems": [
     {
       "system_id": "EPL_unders",
@@ -25,28 +25,28 @@
         "source": "iter21 significance / EPL vol06"
       },
       "live": {
-        "n": 3,
+        "n": 4,
         "n_open": 2,
-        "n_settled": 1,
-        "n_decided": 1,
-        "wins": 1,
+        "n_settled": 2,
+        "n_decided": 2,
+        "wins": 2,
         "hit": 1.0,
-        "units": 1.21,
-        "roi": 1.21,
+        "units": 2.24,
+        "roi": 1.12,
         "max_dd_u": 0.0,
-        "form": "W"
+        "form": "W W"
       },
       "recent": {
-        "n": 1,
+        "n": 2,
         "n_open": 0,
-        "n_settled": 1,
-        "n_decided": 1,
-        "wins": 1,
+        "n_settled": 2,
+        "n_decided": 2,
+        "wins": 2,
         "hit": 1.0,
-        "units": 1.21,
-        "roi": 1.21,
+        "units": 2.24,
+        "roi": 1.12,
         "max_dd_u": 0.0,
-        "form": "W"
+        "form": "W W"
       }
     },
     {
@@ -68,28 +68,28 @@
         "source": "iter21 significance / EPL vol06"
       },
       "live": {
-        "n": 7,
-        "n_open": 4,
-        "n_settled": 3,
-        "n_decided": 3,
-        "wins": 1,
-        "hit": 0.3333,
-        "units": -1.3,
-        "roi": -0.4336,
-        "max_dd_u": -2.0,
-        "form": "W L L"
+        "n": 8,
+        "n_open": 2,
+        "n_settled": 6,
+        "n_decided": 6,
+        "wins": 3,
+        "hit": 0.5,
+        "units": -0.8,
+        "roi": -0.1328,
+        "max_dd_u": -2.15,
+        "form": "W L L W L W"
       },
       "recent": {
-        "n": 3,
+        "n": 6,
         "n_open": 0,
-        "n_settled": 3,
-        "n_decided": 3,
-        "wins": 1,
-        "hit": 0.3333,
-        "units": -1.3,
-        "roi": -0.4336,
-        "max_dd_u": -2.0,
-        "form": "W L L"
+        "n_settled": 6,
+        "n_decided": 6,
+        "wins": 3,
+        "hit": 0.5,
+        "units": -0.8,
+        "roi": -0.1328,
+        "max_dd_u": -2.15,
+        "form": "W L L W L W"
       }
     },
     {
@@ -111,8 +111,8 @@
         "source": "iter20/21 Bundesliga thresh05"
       },
       "live": {
-        "n": 0,
-        "n_open": 0,
+        "n": 1,
+        "n_open": 1,
         "n_settled": 0,
         "n_decided": 0,
         "wins": 0,
@@ -154,8 +154,8 @@
         "source": "iter21 LaLiga vol06"
       },
       "live": {
-        "n": 0,
-        "n_open": 0,
+        "n": 1,
+        "n_open": 1,
         "n_settled": 0,
         "n_decided": 0,
         "wins": 0,
@@ -197,28 +197,28 @@
         "source": "iter21 SerieA vol06"
       },
       "live": {
-        "n": 2,
+        "n": 3,
         "n_open": 2,
-        "n_settled": 0,
-        "n_decided": 0,
-        "wins": 0,
-        "hit": null,
-        "units": 0.0,
-        "roi": null,
-        "max_dd_u": null,
-        "form": "\u2014"
+        "n_settled": 1,
+        "n_decided": 1,
+        "wins": 1,
+        "hit": 1.0,
+        "units": 0.45,
+        "roi": 0.4545,
+        "max_dd_u": 0.0,
+        "form": "W"
       },
       "recent": {
-        "n": 0,
+        "n": 1,
         "n_open": 0,
-        "n_settled": 0,
-        "n_decided": 0,
-        "wins": 0,
-        "hit": null,
-        "units": 0.0,
-        "roi": null,
-        "max_dd_u": null,
-        "form": "\u2014"
+        "n_settled": 1,
+        "n_decided": 1,
+        "wins": 1,
+        "hit": 1.0,
+        "units": 0.45,
+        "roi": 0.4545,
+        "max_dd_u": 0.0,
+        "form": "W"
       }
     },
     {
@@ -363,10 +363,10 @@
       "ah_line": 0.25,
       "pin_odds": 1.8547,
       "edge_vs_pin": 0.1221775710378008,
-      "status": "open",
-      "result": "open",
-      "actual": null,
-      "profit_u": null
+      "status": "settled",
+      "result": "W",
+      "actual": "2.0-3.0",
+      "profit_u": 0.8547
     },
     {
       "date": "2026-08-29",
@@ -380,10 +380,10 @@
       "ah_line": -0.5,
       "pin_odds": 2.03,
       "edge_vs_pin": 0.2007278343244459,
-      "status": "open",
-      "result": "open",
-      "actual": null,
-      "profit_u": null
+      "status": "settled",
+      "result": "W",
+      "actual": "0.0-1.0",
+      "profit_u": 1.03
     },
     {
       "date": "2026-08-30",
@@ -397,10 +397,10 @@
       "ah_line": 0.0,
       "pin_odds": 1.9259,
       "edge_vs_pin": 0.1180889361020984,
-      "status": "open",
-      "result": "open",
-      "actual": null,
-      "profit_u": null
+      "status": "settled",
+      "result": "L",
+      "actual": "1.0-1.0",
+      "profit_u": -1.0
     },
     {
       "date": "2026-08-30",
@@ -414,10 +414,10 @@
       "ah_line": -1.0,
       "pin_odds": 1.6494,
       "edge_vs_pin": 0.1190651764282276,
-      "status": "open",
-      "result": "open",
-      "actual": null,
-      "profit_u": null
+      "status": "settled",
+      "result": "W",
+      "actual": "5.0-2.0",
+      "profit_u": 0.6494
     },
     {
       "date": "2026-08-30",
@@ -431,10 +431,10 @@
       "ah_line": 1.25,
       "pin_odds": 1.4545,
       "edge_vs_pin": 0.0987744841676645,
-      "status": "open",
-      "result": "open",
-      "actual": null,
-      "profit_u": null
+      "status": "settled",
+      "result": "W",
+      "actual": "0.0-1.0",
+      "profit_u": 0.4545
     },
     {
       "date": "2026-08-31",
@@ -471,6 +471,40 @@
       "profit_u": null
     },
     {
+      "date": "2026-09-05",
+      "system": "Bundesliga Unders",
+      "system_id": "Bundesliga_unders",
+      "match": "Paderborn vs Freiburg",
+      "home_team": "Paderborn",
+      "away_team": "Freiburg",
+      "market": "OU Under",
+      "side": "under",
+      "ah_line": 0.25,
+      "pin_odds": 2.26,
+      "edge_vs_pin": 0.2288680524088139,
+      "status": "open",
+      "result": "open",
+      "actual": null,
+      "profit_u": null
+    },
+    {
+      "date": "2026-09-05",
+      "system": "La Liga Home ML",
+      "system_id": "LaLiga_home_ml",
+      "match": "Villarreal vs Deportivo La Coruna",
+      "home_team": "Villarreal",
+      "away_team": "Deportivo La Coruna",
+      "market": "1X2 Home",
+      "side": "H",
+      "ah_line": -1.0,
+      "pin_odds": 1.5236,
+      "edge_vs_pin": 0.1740196120768222,
+      "status": "open",
+      "result": "open",
+      "actual": null,
+      "profit_u": null
+    },
+    {
       "date": "2026-09-06",
       "system": "EPL short Overs",
       "system_id": "EPL_overs_short",
@@ -482,6 +516,57 @@
       "ah_line": -1.0,
       "pin_odds": 1.8621,
       "edge_vs_pin": 0.101486305049567,
+      "status": "open",
+      "result": "open",
+      "actual": null,
+      "profit_u": null
+    },
+    {
+      "date": "2026-09-12",
+      "system": "EPL short Overs",
+      "system_id": "EPL_overs_short",
+      "match": "Crystal Palace vs Ipswich",
+      "home_team": "Crystal Palace",
+      "away_team": "Ipswich",
+      "market": "OU Over",
+      "side": "over",
+      "ah_line": -0.75,
+      "pin_odds": 1.9804,
+      "edge_vs_pin": 0.2214593905170058,
+      "status": "open",
+      "result": "open",
+      "actual": null,
+      "profit_u": null
+    },
+    {
+      "date": "2026-09-12",
+      "system": "Serie A Away ML",
+      "system_id": "SerieA_away_ml",
+      "match": "Sassuolo vs Juventus",
+      "home_team": "Sassuolo",
+      "away_team": "Juventus",
+      "market": "1X2 Away",
+      "side": "A",
+      "ah_line": 1.0,
+      "pin_odds": 1.5988,
+      "edge_vs_pin": 0.0625699557596077,
+      "status": "open",
+      "result": "open",
+      "actual": null,
+      "profit_u": null
+    },
+    {
+      "date": "2026-09-13",
+      "system": "EPL Unders",
+      "system_id": "EPL_unders",
+      "match": "Coventry vs Brighton",
+      "home_team": "Coventry",
+      "away_team": "Brighton",
+      "market": "OU Under",
+      "side": "under",
+      "ah_line": 0.5,
+      "pin_odds": 2.06,
+      "edge_vs_pin": 0.2135401187596238,
       "status": "open",
       "result": "open",
       "actual": null,

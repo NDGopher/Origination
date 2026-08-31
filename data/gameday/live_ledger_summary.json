@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-29T13:46:47.943503+00:00",
+  "updated_at": "2026-08-31T14:41:14.953753+00:00",
   "n_open": 8,
-  "n_settled": 5,
-  "n_total": 13,
+  "n_settled": 10,
+  "n_total": 18,
   "systems": [
     {
       "system_id": "EPL_unders",
@@ -23,28 +23,28 @@
         "source": "iter21 significance / EPL vol06"
       },
       "live": {
-        "n": 3,
+        "n": 4,
         "n_open": 2,
-        "n_settled": 1,
-        "n_decided": 1,
-        "wins": 1,
+        "n_settled": 2,
+        "n_decided": 2,
+        "wins": 2,
         "hit": 1.0,
-        "units": 1.21,
-        "roi": 1.21,
+        "units": 2.24,
+        "roi": 1.12,
         "max_dd_u": 0.0,
-        "form": "W"
+        "form": "W W"
       },
       "recent": {
-        "n": 1,
+        "n": 2,
         "n_open": 0,
-        "n_settled": 1,
-        "n_decided": 1,
-        "wins": 1,
+        "n_settled": 2,
+        "n_decided": 2,
+        "wins": 2,
         "hit": 1.0,
-        "units": 1.21,
-        "roi": 1.21,
+        "units": 2.24,
+        "roi": 1.12,
         "max_dd_u": 0.0,
-        "form": "W"
+        "form": "W W"
       }
     },
     {
@@ -66,28 +66,28 @@
         "source": "iter21 significance / EPL vol06"
       },
       "live": {
-        "n": 7,
-        "n_open": 4,
-        "n_settled": 3,
-        "n_decided": 3,
-        "wins": 1,
-        "hit": 0.3333,
-        "units": -1.3,
-        "roi": -0.4336,
-        "max_dd_u": -2.0,
-        "form": "W L L"
+        "n": 8,
+        "n_open": 2,
+        "n_settled": 6,
+        "n_decided": 6,
+        "wins": 3,
+        "hit": 0.5,
+        "units": -0.8,
+        "roi": -0.1328,
+        "max_dd_u": -2.15,
+        "form": "W L L W L W"
       },
       "recent": {
-        "n": 3,
+        "n": 6,
         "n_open": 0,
-        "n_settled": 3,
-        "n_decided": 3,
-        "wins": 1,
-        "hit": 0.3333,
-        "units": -1.3,
-        "roi": -0.4336,
-        "max_dd_u": -2.0,
-        "form": "W L L"
+        "n_settled": 6,
+        "n_decided": 6,
+        "wins": 3,
+        "hit": 0.5,
+        "units": -0.8,
+        "roi": -0.1328,
+        "max_dd_u": -2.15,
+        "form": "W L L W L W"
       }
     },
     {
@@ -109,8 +109,8 @@
         "source": "iter20/21 Bundesliga thresh05"
       },
       "live": {
-        "n": 0,
-        "n_open": 0,
+        "n": 1,
+        "n_open": 1,
         "n_settled": 0,
         "n_decided": 0,
         "wins": 0,
@@ -152,8 +152,8 @@
         "source": "iter21 LaLiga vol06"
       },
       "live": {
-        "n": 0,
-        "n_open": 0,
+        "n": 1,
+        "n_open": 1,
         "n_settled": 0,
         "n_decided": 0,
         "wins": 0,
@@ -195,28 +195,28 @@
         "source": "iter21 SerieA vol06"
       },
       "live": {
-        "n": 2,
+        "n": 3,
         "n_open": 2,
-        "n_settled": 0,
-        "n_decided": 0,
-        "wins": 0,
-        "hit": null,
-        "units": 0.0,
-        "roi": null,
-        "max_dd_u": null,
-        "form": "\u2014"
+        "n_settled": 1,
+        "n_decided": 1,
+        "wins": 1,
+        "hit": 1.0,
+        "units": 0.45,
+        "roi": 0.4545,
+        "max_dd_u": 0.0,
+        "form": "W"
       },
       "recent": {
-        "n": 0,
+        "n": 1,
         "n_open": 0,
-        "n_settled": 0,
-        "n_decided": 0,
-        "wins": 0,
-        "hit": null,
-        "units": 0.0,
-        "roi": null,
-        "max_dd_u": null,
-        "form": "\u2014"
+        "n_settled": 1,
+        "n_decided": 1,
+        "wins": 1,
+        "hit": 1.0,
+        "units": 0.45,
+        "roi": 0.4545,
+        "max_dd_u": 0.0,
+        "form": "W"
       }
     },
     {

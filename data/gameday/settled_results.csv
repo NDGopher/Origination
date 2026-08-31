@@ -97,3 +97,67 @@ match_id,actual_home,actual_away,league,home_team,away_team,notes
 20260815_RioAve_Porto,0.0,2.0,PrimeiraLiga,Rio Ave,Porto,Porto 2/2; Perez + Sainz
 20260816_Braga_GilVicente,,,PrimeiraLiga,Braga,Gil Vicente,POSTPONED
 20260816_NacionaldaMadeira_Estoril,0.0,0.0,PrimeiraLiga,Nacional da Madeira,Estoril,
+20260828_CrystalPalace_ManchesterCity,1.0,4.0,EPL,Crystal Palace,Manchester City,aligned_sync
+20260829_Bournemouth_Everton,1.0,1.0,EPL,Bournemouth,Everton,aligned_sync
+20260829_Liverpool_NottinghamForest,2.0,2.0,EPL,Liverpool,Nottingham Forest,aligned_sync
+20260829_Tottenham_Newcastle,0.0,2.0,EPL,Tottenham,Newcastle,aligned_sync
+20260830_Sunderland_Fulham,1.0,0.0,EPL,Sunderland,Fulham,aligned_sync
+20260828_BayernMunich_VfBStuttgart,5.0,1.0,Bundesliga,Bayern Munich,VfB Stuttgart,aligned_sync
+20260829_Elversberg_BayerLeverkusen,3.0,2.0,Bundesliga,Elversberg,Bayer Leverkusen,aligned_sync
+20260829_FCCologne_Hoffenheim,3.0,2.0,Bundesliga,FC Cologne,Hoffenheim,aligned_sync
+20260829_Mainz05_Paderborn,0.0,0.0,Bundesliga,Mainz 05,Paderborn,aligned_sync
+20260829_RBLeipzig_BorussiaM.Gladbach,3.0,0.0,Bundesliga,RB Leipzig,Borussia M.Gladbach,aligned_sync
+20260829_UnionBerlin_EintrachtFrankfurt,3.0,3.0,Bundesliga,Union Berlin,Eintracht Frankfurt,aligned_sync
+20260830_Augsburg_Schalke04,3.0,0.0,Bundesliga,Augsburg,Schalke 04,aligned_sync
+20260830_Freiburg_WerderBremen,4.0,1.0,Bundesliga,Freiburg,Werder Bremen,aligned_sync
+20260824_Bologna_Lazio,0.0,1.0,SerieA,Bologna,Lazio,aligned_sync
+20260828_ACMilan_Venezia,2.0,0.0,SerieA,AC Milan,Venezia,aligned_sync
+20260829_Fiorentina_Frosinone,0.0,3.0,SerieA,Fiorentina,Frosinone,aligned_sync
+20260829_Juventus_Parma,2.0,0.0,SerieA,Juventus,Parma,aligned_sync
+20260829_Monza_Udinese,2.0,3.0,SerieA,Monza,Udinese,aligned_sync
+20260829_Sassuolo_Torino,2.0,1.0,SerieA,Sassuolo,Torino,aligned_sync
+20260830_Lazio_Genoa,1.0,0.0,SerieA,Lazio,Genoa,aligned_sync
+20260830_Napoli_Como,1.0,2.0,SerieA,Napoli,Como,aligned_sync
+20260825_Valencia_RealBetis,0.0,1.0,LaLiga,Valencia,Real Betis,aligned_sync
+20260826_RealMadrid_RealSociedad,4.0,1.0,LaLiga,Real Madrid,Real Sociedad,aligned_sync
+20260827_Barcelona_AthleticClub,2.0,0.0,LaLiga,Barcelona,Athletic Club,aligned_sync
+20260827_CeltaVigo_Osasuna,1.0,2.0,LaLiga,Celta Vigo,Osasuna,aligned_sync
+20260828_Alaves_Villarreal,1.0,0.0,LaLiga,Alaves,Villarreal,aligned_sync
+20260828_RacingSantander_Elche,3.0,2.0,LaLiga,Racing Santander,Elche,aligned_sync
+20260829_Levante_RealBetis,5.0,2.0,LaLiga,Levante,Real Betis,aligned_sync
+20260829_RealSociedad_Espanyol,2.0,1.0,LaLiga,Real Sociedad,Espanyol,aligned_sync
+20260829_Sevilla_AtleticoMadrid,1.0,3.0,LaLiga,Sevilla,Atletico Madrid,aligned_sync
+20260830_CeltaVigo_AthleticClub,0.0,2.0,LaLiga,Celta Vigo,Athletic Club,aligned_sync
+20260830_RealMadrid_Malaga,4.0,0.0,LaLiga,Real Madrid,Malaga,aligned_sync
+20260828_Lille_ParisSaint-Germain,2.0,2.0,Ligue1,Lille,Paris Saint-Germain,aligned_sync
+20260829_Auxerre_Angers,1.0,3.0,Ligue1,Auxerre,Angers,aligned_sync
+20260829_Brest_Toulouse,2.0,2.0,Ligue1,Brest,Toulouse,aligned_sync
+20260829_Lyon_LeHavre,1.0,1.0,Ligue1,Lyon,Le Havre,aligned_sync
+20260829_Strasbourg_Lens,2.0,1.0,Ligue1,Strasbourg,Lens,aligned_sync
+20260830_Monaco_Marseille,2.0,0.0,Ligue1,Monaco,Marseille,aligned_sync
+20260830_ParisFC_Nice,3.0,0.0,Ligue1,Paris FC,Nice,aligned_sync
+20260824_GilVicente_CasaPia,2.0,0.0,PrimeiraLiga,Gil Vicente,Casa Pia,aligned_sync
+20260824_Fulham_Chelsea,2.0,3.0,EPL,Fulham,Chelsea,aligned_sync
+20260829_Coventry_Hull,0.0,1.0,EPL,Coventry,Hull,aligned_sync
+20260830_Chelsea_Brighton,4.0,3.0,EPL,Chelsea,Brighton,aligned_sync
+20260830_Leeds_Brentford,1.0,1.0,EPL,Leeds,Brentford,aligned_sync
+20260830_ManchesterUnited_Ipswich,5.0,2.0,EPL,Manchester United,Ipswich,aligned_sync
+20260829_BorussiaDortmund_HamburgerSV,2.0,0.0,Bundesliga,Borussia Dortmund,Hamburger SV,aligned_sync
+20260822_Derby_Cardiff,2.0,2.0,Championship,Derby,Cardiff,aligned_sync
+20260822_Lincoln_Portsmouth,1.0,3.0,Championship,Lincoln,Portsmouth,aligned_sync
+20260822_QPR_Bolton,0.0,0.0,Championship,QPR,Bolton,aligned_sync
+20260822_WestHam_Charlton,1.0,2.0,Championship,West Ham,Charlton,aligned_sync
+20260822_Wrexham_Watford,1.0,1.0,Championship,Wrexham,Watford,aligned_sync
+20260824_Roma_Fiorentina,4.0,0.0,SerieA,Roma,Fiorentina,aligned_sync
+20260830_Cagliari_Inter,0.0,1.0,SerieA,Cagliari,Inter,aligned_sync
+20260824_Malaga_DeportivoLaCoruna,1.0,1.0,LaLiga,Malaga,Deportivo La Coruna,aligned_sync
+20260824_Osasuna_Levante,0.0,0.0,LaLiga,Osasuna,Levante,aligned_sync
+20260830_DeportivoLaCoruna_Valencia,3.0,1.0,LaLiga,Deportivo La Coruna,Valencia,aligned_sync
+20260829_Lorient_Troyes,1.0,2.0,Ligue1,Lorient,Troyes,aligned_sync
+20260830_Rennes_LeMans,3.0,2.0,Ligue1,Rennes,Le Mans,aligned_sync
+20260822_FortunaSittard_AZAlkmaar,0.0,2.0,Eredivisie,Fortuna Sittard,AZ Alkmaar,aligned_sync
+20260822_Heerenveen_PECZwolle,0.0,2.0,Eredivisie,Heerenveen,PEC Zwolle,aligned_sync
+20260822_SportingLisbon_Alverca,3.0,1.0,PrimeiraLiga,Sporting Lisbon,Alverca,aligned_sync
+20260821_StandardLiege_RAALLaLouviere,2.0,0.0,Belgium,Standard Liege,RAAL La Louviere,aligned_sync
+20260822_Fenerbahce_Konyaspor,4.0,2.0,Turkey,Fenerbahce,Konyaspor,aligned_sync
+20260824_Kocaelispor_Amedspor,2.0,0.0,Turkey,Kocaelispor,Amedspor,aligned_sync

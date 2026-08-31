@@ -1,24 +1,24 @@
 {
-  "updated_at": "2026-08-29T14:02:49.409492+00:00",
+  "updated_at": "2026-08-31T14:46:45.381319+00:00",
   "track": {
-    "n": 33,
-    "n_open": 27,
-    "n_settled": 6,
-    "n_decided": 6,
-    "wins": 2,
-    "hit": 0.3333,
-    "units": -2.8,
-    "roi": -0.4668
+    "n": 34,
+    "n_open": 9,
+    "n_settled": 25,
+    "n_decided": 25,
+    "wins": 11,
+    "hit": 0.44,
+    "units": -6.04,
+    "roi": -0.2414
   },
   "conflict_watch": {
-    "n": 18,
-    "n_open": 11,
-    "n_settled": 7,
-    "n_decided": 7,
-    "wins": 3,
-    "hit": 0.4286,
-    "units": -1.22,
-    "roi": -0.1746
+    "n": 21,
+    "n_open": 7,
+    "n_settled": 14,
+    "n_decided": 14,
+    "wins": 8,
+    "hit": 0.5714,
+    "units": 2.03,
+    "roi": 0.1451
   },
-  "n_total": 51
+  "n_total": 55
 }
