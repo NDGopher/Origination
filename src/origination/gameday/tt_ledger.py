@@ -611,10 +611,19 @@ def run_daily_from_score(
     cands = select_candidates(tt_df, score_df=score_df)
     card = write_today_card(cands)
     n_add = record_candidates(cands) if record else 0
+    n_line = 0
+    try:
+        from origination.gameday.tt_line_tracker import record_tt_observations, write_report as write_tt_line
+
+        n_line = record_tt_observations(cands if len(cands) else None)
+        write_tt_line()
+    except Exception:  # noqa: BLE001
+        pass
     report = write_report()
     return {
         "n_candidates": int(len(cands)),
         "n_recorded": int(n_add),
+        "n_line_obs": int(n_line),
         "card": str(card),
         "report": str(report),
     }

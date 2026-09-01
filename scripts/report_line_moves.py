@@ -33,6 +33,13 @@ def main() -> int:
     close_past_fixtures()
     path = write_report()
     print(f"Wrote {path}", flush=True)
+    try:
+        from origination.gameday.tt_line_tracker import write_report as write_tt
+
+        tt_path = write_tt()
+        print(f"Wrote {tt_path}", flush=True)
+    except Exception as exc:  # noqa: BLE001
+        print(f"TT line report skipped: {exc}", flush=True)
     return 0
 
 

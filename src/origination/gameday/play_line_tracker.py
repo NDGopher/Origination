@@ -24,6 +24,8 @@ SUMMARY = ROOT / "data" / "gameday" / "play_line_summary.csv"
 LEDGER = ROOT / "data" / "gameday" / "live_ledger.csv"
 SCAN_HISTORY = ROOT / "experiments" / "gameday_scan" / "history"
 REPORT = ROOT / "docs" / "LINE_MOVES.md"
+SCAN_LOG = ROOT / "data" / "gameday" / "line_scan_log.jsonl"
+DAILY_RUNS = ROOT / "docs" / "daily_runs"
 
 HISTORY_COLS = [
     "observed_at",
@@ -124,6 +126,31 @@ def steam_label(first_odds: float | None, close_odds: float | None, *, flat_pp: 
     if clv < -flat_pp:
         return "against_us"
     return "flat"
+
+
+def bet_timing_action(
+    first_odds: float | None,
+    last_odds: float | None,
+    *,
+    clv_last_pct: float | None = None,
+    n_obs: int = 1,
+    tier: str = "WATCH",
+) -> str:
+    """Actionable bet-timing label for live deployment."""
+    if first_odds is None or last_odds is None or n_obs < 2:
+        return "MONITOR" if tier == "WATCH" else "INSUFFICIENT_DATA"
+    clv = clv_last_pct if clv_last_pct is not None else odds_clv_pct(first_odds, last_odds)
+    if clv is None:
+        return "MONITOR"
+    if clv >= 2.0:
+        return "BET_NOW"
+    if clv <= -2.0:
+        return "WAIT"
+    if tier == "PLAY" and clv >= 0:
+        return "BET_NOW"
+    if tier == "PLAY" and clv < -1.0:
+        return "WAIT"
+    return "MONITOR"
 
 
 def timing_note(first: float | None, entry: float | None, close: float | None) -> str:
@@ -343,6 +370,58 @@ def _refresh_summary_from_history(hist: pd.DataFrame, summary: pd.DataFrame) -> 
     return pd.DataFrame(rows)
 
 
+def _prev_odds_by_play(hist: pd.DataFrame) -> dict[str, float | None]:
+    out: dict[str, float | None] = {}
+    if len(hist) == 0:
+        return out
+    for pid, g in hist.groupby("play_id", sort=False):
+        g = g.sort_values("observed_at")
+        out[str(pid)] = _f(g.iloc[-1].get("pin_odds"))
+    return out
+
+
+def append_scan_log(
+    stamp: str,
+    new_rows: list[dict],
+    *,
+    prev_odds: dict[str, float | None],
+) -> None:
+    """Append one JSONL record per scan — elite audit trail with per-play deltas."""
+    moves: list[dict[str, Any]] = []
+    for row in new_rows:
+        pid = str(row.get("play_id") or "")
+        now_odds = _f(row.get("pin_odds"))
+        prev = prev_odds.get(pid)
+        delta = round(now_odds - prev, 4) if now_odds is not None and prev is not None else None
+        clv_vs_prev = odds_clv_pct(prev, now_odds) if prev and now_odds else None
+        moves.append(
+            {
+                "play_id": pid,
+                "tier": row.get("tier"),
+                "match": f"{row.get('home_team')} vs {row.get('away_team')}",
+                "system": row.get("system"),
+                "pin_odds": now_odds,
+                "prev_pin_odds": prev,
+                "delta_odds": delta,
+                "clv_vs_prev_pct": clv_vs_prev,
+                "edge_vs_pin": _f(row.get("edge_vs_pin")),
+                "hours_to_kick": row.get("hours_to_kick"),
+            }
+        )
+    payload = {
+        "scan_stamp": stamp,
+        "observed_at": _now(),
+        "kind": "live_plays",
+        "n_plays": sum(1 for m in moves if m.get("tier") == "PLAY"),
+        "n_watch": sum(1 for m in moves if m.get("tier") == "WATCH"),
+        "n_observations": len(moves),
+        "moves": moves,
+    }
+    SCAN_LOG.parent.mkdir(parents=True, exist_ok=True)
+    with SCAN_LOG.open("a", encoding="utf-8") as fh:
+        fh.write(json.dumps(payload, default=str) + "\n")
+
+
 def record_scan_observations(
     plays: pd.DataFrame | None,
     watches: pd.DataFrame | None = None,
@@ -353,6 +432,7 @@ def record_scan_observations(
     stamp = scan_stamp or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     kickoffs = _load_kickoffs()
     hist = load_history()
+    prev_odds = _prev_odds_by_play(hist)
     new_rows: list[dict] = []
 
     if plays is not None and len(plays):
@@ -365,6 +445,7 @@ def record_scan_observations(
     if not new_rows:
         return 0
 
+    append_scan_log(stamp, new_rows, prev_odds=prev_odds)
     extra = pd.DataFrame(new_rows)
     hist = pd.concat([hist, extra], ignore_index=True) if len(hist) else extra
     save_history(hist)
@@ -470,6 +551,48 @@ def closed_plays_line_table(*, limit: int = 30) -> pd.DataFrame:
     return done
 
 
+def _observation_timeline(hist: pd.DataFrame, play_id: str) -> list[str]:
+    g = hist[hist["play_id"].astype(str) == str(play_id)].sort_values("observed_at")
+    lines: list[str] = []
+    prev: float | None = None
+    for _, r in g.iterrows():
+        odds = _f(r.get("pin_odds"))
+        if odds is None:
+            continue
+        delta_s = ""
+        if prev is not None:
+            d = odds - prev
+            delta_s = f" ({d:+.3f})"
+        hrs = r.get("hours_to_kick")
+        hrs_s = f" · {float(hrs):.0f}h to KO" if pd.notna(hrs) else ""
+        ts = str(r.get("observed_at") or "")[:16]
+        lines.append(f"  - {ts} · {odds:.3f}{delta_s}{hrs_s}")
+        prev = odds
+    return lines
+
+
+def _system_stats(sm: pd.DataFrame) -> pd.DataFrame:
+    if len(sm) == 0 or "system" not in sm.columns:
+        return pd.DataFrame()
+    rows = []
+    for sys_name, g in sm.groupby("system", sort=False):
+        closed = g[g["status"].astype(str).isin(["closed", "settled"])]
+        tracking = g[g["status"].astype(str) == "tracking"]
+        clv = pd.to_numeric(closed["clv_first_pct"], errors="coerce") if len(closed) else pd.Series(dtype=float)
+        rows.append(
+            {
+                "system": sys_name,
+                "open": int(len(tracking)),
+                "closed": int(len(closed)),
+                "mean_clv_first": float(clv.mean()) if len(clv) else None,
+                "pct_toward_us": float((closed["steam_vs_first"] == "toward_us").mean())
+                if len(closed)
+                else None,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
 def format_scan_section() -> str:
     """Short block for daily scan stdout / decision card."""
     open_ = open_plays_line_table()
@@ -487,14 +610,30 @@ def format_scan_section() -> str:
         last = _f(r.get("last_pin_odds"))
         clv = r.get("clv_last_pct")
         steam = r.get("steam_vs_first") or "?"
-        n = r.get("n_observations")
-        clv_s = f"{float(clv):+.1f}%" if pd.notna(clv) else "—"
+        n = int(r.get("n_observations") or 0)
+        tier = str(r.get("first_tier") or "WATCH")
+        clv_f = float(clv) if pd.notna(clv) else None
+        action = bet_timing_action(first, last, clv_last_pct=clv_f, n_obs=n, tier=tier)
+        clv_s = f"{clv_f:+.1f}%" if clv_f is not None else "—"
+        first_s = f"{first:.3f}" if first else "—"
+        last_s = f"{last:.3f}" if last else "—"
         lines.append(
-            f"  {match[:38]:<38} first {first:.3f} → now {last:.3f}  "
-            f"CLV vs now {clv_s}  ({steam}, n={n})"
+            f"  [{action:<6}] {match[:32]:<32} {first_s}→{last_s}  CLV {clv_s}  "
+            f"{steam} n={n}"
         )
-    lines.append("  Full report → docs/LINE_MOVES.md")
+    lines.append("  Full report → docs/LINE_MOVES.md · scan log → data/gameday/line_scan_log.jsonl")
     return "\n".join(lines)
+
+
+def write_daily_snapshot() -> Path | None:
+    """Archive today's line-move report under docs/daily_runs/."""
+    if not REPORT.is_file():
+        return None
+    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    dest = DAILY_RUNS / f"{day}_LINE_MOVES.md"
+    DAILY_RUNS.mkdir(parents=True, exist_ok=True)
+    dest.write_text(REPORT.read_text(encoding="utf-8"), encoding="utf-8")
+    return dest
 
 
 def write_report() -> Path:
@@ -512,6 +651,11 @@ def write_report() -> Path:
         "",
         "Backtests use **closing** Pin; live CLV here tells you whether to bet early or wait.",
         "",
+        "**Actions:** `BET_NOW` = steam toward us · `WAIT` = line moving against · ",
+        "`MONITOR` = flat/thin history · `INSUFFICIENT_DATA` = first observation only.",
+        "",
+        f"**Audit trail:** `{SCAN_LOG.relative_to(ROOT)}` (append-only JSONL per scan).",
+        "",
     ]
 
     if len(sm) == 0:
@@ -522,21 +666,53 @@ def write_report() -> Path:
         lines.append(f"**Tracking:** {len(tracking)} open · **Closed/settled:** {len(closed)}")
         lines.append("")
 
+        sys_stats = _system_stats(sm)
+        if len(sys_stats):
+            lines.append("## By system")
+            lines.append("")
+            lines.append("| System | Open | Closed | Avg CLV first | % toward us |")
+            lines.append("|--------|-----:|-------:|--------------:|------------:|")
+            for _, r in sys_stats.iterrows():
+                avg = r.get("mean_clv_first")
+                pct = r.get("pct_toward_us")
+                avg_s = f"{float(avg):+.1f}%" if pd.notna(avg) else "—"
+                pct_s = f"{float(pct) * 100:.0f}%" if pd.notna(pct) else "—"
+                lines.append(
+                    f"| {r.get('system')} | {int(r.get('open') or 0)} | "
+                    f"{int(r.get('closed') or 0)} | {avg_s} | {pct_s} |"
+                )
+            lines.append("")
+
         if len(tracking):
             lines.append("## Open — CLV vs last scan (bet now or wait?)")
             lines.append("")
-            lines.append("| Match | System | First | Now | CLV vs now | Steam | Obs |")
-            lines.append("|-------|--------|------:|----:|-----------:|-------|----:|")
+            lines.append("| Action | Match | System | First | Now | CLV vs now | Steam | Obs |")
+            lines.append("|--------|-------|--------|------:|----:|-----------:|-------|----:|")
             for _, r in tracking.sort_values("match_date").iterrows():
                 match = f"{r.get('home_team')} vs {r.get('away_team')}"
                 clv = r.get("clv_last_pct")
-                clv_s = f"{float(clv):+.1f}%" if pd.notna(clv) else "—"
+                clv_f = float(clv) if pd.notna(clv) else None
+                clv_s = f"{clv_f:+.1f}%" if clv_f is not None else "—"
+                first = _f(r.get("first_pin_odds"))
+                last = _f(r.get("last_pin_odds"))
+                n = int(r.get("n_observations") or 0)
+                tier = str(r.get("first_tier") or "WATCH")
+                action = bet_timing_action(first, last, clv_last_pct=clv_f, n_obs=n, tier=tier)
                 lines.append(
-                    f"| {match} | {r.get('system')} | {r.get('first_pin_odds'):.3f} | "
-                    f"{r.get('last_pin_odds'):.3f} | {clv_s} | {r.get('steam_vs_first')} | "
-                    f"{int(r.get('n_observations') or 0)} |"
+                    f"| **{action}** | {match} | {r.get('system')} | "
+                    f"{r.get('first_pin_odds'):.3f} | {r.get('last_pin_odds'):.3f} | "
+                    f"{clv_s} | {r.get('steam_vs_first')} | {n} |"
                 )
             lines.append("")
+
+            lines.append("## Open — observation timelines")
+            lines.append("")
+            for _, r in tracking.sort_values("match_date").iterrows():
+                match = f"{r.get('home_team')} vs {r.get('away_team')}"
+                lines.append(f"### {match} ({r.get('system')})")
+                for tl in _observation_timeline(hist, str(r.get("play_id"))):
+                    lines.append(tl)
+                lines.append("")
 
         if len(closed):
             pos = closed[pd.to_numeric(closed["clv_first_pct"], errors="coerce") > 2]
@@ -566,19 +742,39 @@ def write_report() -> Path:
 
     stats_path = ROOT / "data" / "gameday" / "line_move_stats.json"
     closed_df = sm[sm["status"].astype(str).isin(["closed", "settled"])] if len(sm) else pd.DataFrame()
+    tracking_df = sm[sm["status"].astype(str) == "tracking"] if len(sm) else pd.DataFrame()
+    payload: dict[str, Any] = {
+        "updated_at": _now(),
+        "n_tracking": int(len(tracking_df)),
+        "n_closed": int(len(closed_df)),
+        "n_history_rows": int(len(hist)),
+        "n_scan_log_entries": 0,
+    }
+    if SCAN_LOG.is_file():
+        payload["n_scan_log_entries"] = sum(1 for _ in SCAN_LOG.open(encoding="utf-8"))
     if len(closed_df):
-        payload = {
-            "updated_at": _now(),
-            "n_closed": int(len(closed_df)),
-            "mean_clv_first_pct": float(
-                pd.to_numeric(closed_df["clv_first_pct"], errors="coerce").mean()
-            ),
-            "pct_toward_us": float((closed_df["steam_vs_first"] == "toward_us").mean()),
-            "n_history_rows": int(len(hist)),
-        }
-        stats_path.parent.mkdir(parents=True, exist_ok=True)
-        stats_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        payload["mean_clv_first_pct"] = float(
+            pd.to_numeric(closed_df["clv_first_pct"], errors="coerce").mean()
+        )
+        payload["pct_toward_us"] = float((closed_df["steam_vs_first"] == "toward_us").mean())
+    if len(tracking_df):
+        actions = []
+        for _, r in tracking_df.iterrows():
+            actions.append(
+                bet_timing_action(
+                    _f(r.get("first_pin_odds")),
+                    _f(r.get("last_pin_odds")),
+                    clv_last_pct=_f(r.get("clv_last_pct")),
+                    n_obs=int(r.get("n_observations") or 0),
+                    tier=str(r.get("first_tier") or "WATCH"),
+                )
+            )
+        payload["open_bet_now"] = int(sum(1 for a in actions if a == "BET_NOW"))
+        payload["open_wait"] = int(sum(1 for a in actions if a == "WAIT"))
+    stats_path.parent.mkdir(parents=True, exist_ok=True)
+    stats_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
     REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text("\n".join(lines), encoding="utf-8")
+    write_daily_snapshot()
     return REPORT

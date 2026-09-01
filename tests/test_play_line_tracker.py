@@ -1,6 +1,7 @@
 """Tests for live play line-move / CLV helpers."""
 
 from origination.gameday.play_line_tracker import (
+    bet_timing_action,
     odds_clv_pct,
     steam_label,
     timing_note,
@@ -25,3 +26,10 @@ def test_steam_toward_us():
 def test_timing_note_early_rewarded():
     note = timing_note(1.98, 1.98, 1.90)
     assert "early" in note.lower() or "rewarded" in note.lower()
+
+
+def test_bet_timing_action():
+    assert bet_timing_action(1.98, 1.90, clv_last_pct=4.2, n_obs=3, tier="PLAY") == "BET_NOW"
+    assert bet_timing_action(1.80, 1.82, clv_last_pct=-1.1, n_obs=3, tier="PLAY") == "WAIT"
+    assert bet_timing_action(2.06, 2.06, clv_last_pct=0.0, n_obs=2, tier="WATCH") == "MONITOR"
+    assert bet_timing_action(2.06, 2.06, n_obs=1, tier="PLAY") == "INSUFFICIENT_DATA"

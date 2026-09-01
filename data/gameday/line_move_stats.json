@@ -1,7 +1,11 @@
 {
-  "updated_at": "2026-09-01T15:37:20.042811+00:00",
+  "updated_at": "2026-09-01T17:26:36.092820+00:00",
+  "n_tracking": 11,
   "n_closed": 2,
+  "n_history_rows": 23,
+  "n_scan_log_entries": 0,
   "mean_clv_first_pct": 0.0,
   "pct_toward_us": 0.0,
-  "n_history_rows": 23
+  "open_bet_now": 5,
+  "open_wait": 1
 }

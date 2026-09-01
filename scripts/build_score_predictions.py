@@ -718,7 +718,8 @@ def main() -> int:
         tt_info = run_daily_from_score(df, tt, record=True)
         print(
             f"TT paper card: candidates={tt_info['n_candidates']}  "
-            f"newly_logged={tt_info['n_recorded']}  → {tt_info['card']}",
+            f"newly_logged={tt_info['n_recorded']}  "
+            f"line_obs={tt_info.get('n_line_obs', 0)}  → {tt_info['card']}",
             flush=True,
         )
     except Exception as exc:  # noqa: BLE001

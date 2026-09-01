@@ -573,7 +573,7 @@ def main():
         if line_section:
             print(line_section, flush=True)
         print(
-            f"Line tracker +{n_line} obs → {line_path}",
+            f"Line tracker +{n_line} obs → {line_path} · JSONL → data/gameday/line_scan_log.jsonl",
             flush=True,
         )
         print(f"Ledger +{n_add} recorded, {n_set} settled → {ledger_path}", flush=True)
