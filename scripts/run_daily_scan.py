@@ -547,10 +547,35 @@ def main():
 
     try:
         from origination.gameday.live_ledger import record_from_scan, settle_open, write_report
+        from origination.gameday.play_line_tracker import (
+            close_past_fixtures,
+            format_scan_section,
+            mark_settled,
+            record_scan_observations,
+            write_report as write_line_report,
+        )
 
+        n_line = record_scan_observations(
+            plays_df if len(plays_df) else None,
+            nears_df if len(nears_df) else None,
+        )
         n_add = record_from_scan(plays_df if len(plays_df) else None)
         n_set = settle_open()
+        if n_set:
+            settled = pd.read_csv(ROOT / "data" / "gameday" / "live_ledger.csv")
+            settled = settled[settled["status"].astype(str) == "settled"]
+            recent = settled.sort_values("settled_at").tail(n_set)
+            mark_settled(recent["play_id"].astype(str).tolist())
+        close_past_fixtures()
+        line_path = write_line_report()
         ledger_path = write_report()
+        line_section = format_scan_section()
+        if line_section:
+            print(line_section, flush=True)
+        print(
+            f"Line tracker +{n_line} obs → {line_path}",
+            flush=True,
+        )
         print(f"Ledger +{n_add} recorded, {n_set} settled → {ledger_path}", flush=True)
     except Exception as exc:  # noqa: BLE001
         print(f"WARNING live ledger update skipped: {exc}", flush=True)
