@@ -161,3 +161,17 @@ match_id,actual_home,actual_away,league,home_team,away_team,notes
 20260821_StandardLiege_RAALLaLouviere,2.0,0.0,Belgium,Standard Liege,RAAL La Louviere,aligned_sync
 20260822_Fenerbahce_Konyaspor,4.0,2.0,Turkey,Fenerbahce,Konyaspor,aligned_sync
 20260824_Kocaelispor_Amedspor,2.0,0.0,Turkey,Kocaelispor,Amedspor,aligned_sync
+20260831_AstonVilla_Arsenal,0.0,1.0,EPL,Aston Villa,Arsenal,aligned_sync
+20260829_Watford_WestHam,1.0,1.0,Championship,Watford,West Ham,aligned_sync
+20260831_Atalanta_Bologna,1.0,0.0,SerieA,Atalanta,Bologna,aligned_sync
+20260831_Lecce_Roma,0.0,4.0,SerieA,Lecce,Roma,aligned_sync
+20260831_Barcelona_RayoVallecano,5.0,2.0,LaLiga,Barcelona,Rayo Vallecano,aligned_sync
+20260831_Osasuna_Getafe,1.0,0.0,LaLiga,Osasuna,Getafe,aligned_sync
+20260830_Feyenoord_ADODenHaag,2.0,2.0,Eredivisie,Feyenoord,ADO Den Haag,aligned_sync
+20260831_Benfica_Estoril,2.0,1.0,PrimeiraLiga,Benfica,Estoril,aligned_sync
+20260831_SportingBraga_VitoriaGuimaraes,1.0,0.0,PrimeiraLiga,Sporting Braga,Vitoria Guimaraes,aligned_sync
+20260829_CercleBrugge_Lommel,0.0,1.0,Belgium,Cercle Brugge,Lommel,aligned_sync
+20260829_Hearts_StJohnstone,2.0,1.0,Scotland,Hearts,St Johnstone,aligned_sync
+20260830_Samsunspor_Fenerbahce,0.0,2.0,Turkey,Samsunspor,Fenerbahce,aligned_sync
+20260831_Amedspor_Trabzonspor,2.0,1.0,Turkey,Amedspor,Trabzonspor,aligned_sync
+20260831_Besiktas_Corum,6.0,2.0,Turkey,Besiktas,Corum,aligned_sync

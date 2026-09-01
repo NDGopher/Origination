@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-31T14:41:14.953753+00:00",
+  "updated_at": "2026-09-01T14:49:12.563313+00:00",
   "ledger_start": "2026-08-14",
   "recent_n": 15,
   "n_open": 8,
-  "n_settled": 10,
-  "n_total": 18,
+  "n_settled": 11,
+  "n_total": 19,
   "systems": [
     {
       "system_id": "EPL_unders",
@@ -197,28 +197,28 @@
         "source": "iter21 SerieA vol06"
       },
       "live": {
-        "n": 3,
+        "n": 4,
         "n_open": 2,
-        "n_settled": 1,
-        "n_decided": 1,
-        "wins": 1,
+        "n_settled": 2,
+        "n_decided": 2,
+        "wins": 2,
         "hit": 1.0,
-        "units": 0.45,
-        "roi": 0.4545,
+        "units": 1.1,
+        "roi": 0.5498,
         "max_dd_u": 0.0,
-        "form": "W"
+        "form": "W W"
       },
       "recent": {
-        "n": 1,
+        "n": 2,
         "n_open": 0,
-        "n_settled": 1,
-        "n_decided": 1,
-        "wins": 1,
+        "n_settled": 2,
+        "n_decided": 2,
+        "wins": 2,
         "hit": 1.0,
-        "units": 0.45,
-        "roi": 0.4545,
+        "units": 1.1,
+        "roi": 0.5498,
         "max_dd_u": 0.0,
-        "form": "W"
+        "form": "W W"
       }
     },
     {
@@ -448,10 +448,10 @@
       "ah_line": 0.75,
       "pin_odds": 1.6452,
       "edge_vs_pin": 0.0802407066611486,
-      "status": "open",
-      "result": "open",
-      "actual": null,
-      "profit_u": null
+      "status": "settled",
+      "result": "W",
+      "actual": "0.0-4.0",
+      "profit_u": 0.6452
     },
     {
       "date": "2026-09-05",
@@ -567,6 +567,23 @@
       "ah_line": 0.5,
       "pin_odds": 2.06,
       "edge_vs_pin": 0.2135401187596238,
+      "status": "open",
+      "result": "open",
+      "actual": null,
+      "profit_u": null
+    },
+    {
+      "date": "2026-09-13",
+      "system": "Serie A Away ML",
+      "system_id": "SerieA_away_ml",
+      "match": "Torino vs Roma",
+      "home_team": "Torino",
+      "away_team": "Roma",
+      "market": "1X2 Away",
+      "side": "A",
+      "ah_line": 0.5,
+      "pin_odds": 1.6897,
+      "edge_vs_pin": 0.0543364810042263,
       "status": "open",
       "result": "open",
       "actual": null,
